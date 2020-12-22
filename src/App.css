@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+* {
+    /* outline: 1px solid grey; */
+}
+
+.tabLabel::after {
+  content: ' \25BF';
+  font-size: 1em;
+}
+
+table, th, td {
+  /* font-size: 0.7em; */
+  /* background-color: white; */
+}

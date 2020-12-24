@@ -17,22 +17,24 @@ const NavBarContainer = styled.div`
 `;
 
 const Logo = styled.div`
-    padding: 0 0.2em;
+    padding: 0 0 0 1em;
     width: 10em;
     align-self: flex-end;
     @media only screen and (max-width: 768px) {
-        width: 5em;
-        margin-right: 0.5%;
+        width: 7em;
+        align-self: center;
     }
 `;
 
 const Demo = styled.div`
     padding: 0 0.2em;
     width: 10em;
-    align-self: center;
+    align-self: flex-end;
+    margin-left: 0.5%;
+    margin-bottom: 1%;
     @media only screen and (max-width: 768px) {
-        width: 5em;
-        margin-left: 0.5%;
+        font-size: 0.7em;
+        align-self: center;
     }
 `;
 
@@ -47,7 +49,7 @@ const TabContainer = styled.div`
     
     
     @media only screen and (max-width: 768px) {
-        width: 100%;
+        width: 60%;
     }
 `;
 const NavBarTab = styled.div`
@@ -61,9 +63,6 @@ const NavBarTab = styled.div`
     @media only screen and (max-width: 768px) {
     }
 
-    :hover ~ #productDropdown {
-        display: none;
-      }
 
     
 `;
@@ -79,7 +78,7 @@ const TabLabel = styled.div`
 
 
     @media only screen and (max-width: 768px) {
-        font-size: 1em;
+        font-size: 0.7em;
     }
     
 `;
@@ -91,7 +90,8 @@ const DropDownContent = styled.div`
     font-size: 1em;
     border-top: 1px solid grey;
     opacity: 1;
-    animation: fade 0.2s linear;
+    animation: fade 0.8s linear;
+    border-radius: 0 0 0.5em 0.5em;
     background-image: ${colors.navbarBg};
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -178,11 +178,7 @@ const NavBar = ({ setSelectedTab }) => {
                     onMouseLeave={() => handleMouseLeave('products')}
                     >
                     <TabLabel 
-                        
                         className="tabLabel"
-                        onClick={() => handleClick('about')}
-                        selected={aboutSelected}
-                        
                     >
                         Products & Solutions
                     </TabLabel>
@@ -193,8 +189,6 @@ const NavBar = ({ setSelectedTab }) => {
                 >
                     <TabLabel
                         className="tabLabel"
-                        onClick={() => handleClick('about')}
-                        selected={aboutSelected}
                     >
                         Resources
                     </TabLabel>
@@ -205,8 +199,6 @@ const NavBar = ({ setSelectedTab }) => {
                 >
                     <TabLabel
                         className="tabLabel"
-                        onClick={() => handleClick('about')}
-                        selected={aboutSelected}
                     >
                         Partners
                     </TabLabel>
@@ -217,8 +209,6 @@ const NavBar = ({ setSelectedTab }) => {
                 >
                     <TabLabel
                         className="tabLabel"
-                        onClick={() => handleClick('about')}
-                        selected={aboutSelected}
                     >
                         About us
                     </TabLabel>
@@ -346,12 +336,12 @@ const NavBar = ({ setSelectedTab }) => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td><a href="/">Company Info</a></td>
-                            <td><a href="/">Press</a></td>
+                            <td><a href="/">&#128104;&#127997;&#8205;&#128188; Company Info</a></td>
+                            <td><a href="/">&#128240; Press</a></td>
                         </tr>
                         <tr>
-                            <td><a href="/">Contact EquityX</a></td>
-                            <td><a href="/">Careers</a></td>
+                            <td><a href="/">&#128236; Contact EquityX</a></td>
+                            <td><a href="/">&#128526; Careers</a></td>
                         </tr>
                     </tbody>
                 </table>

@@ -23,10 +23,7 @@
 }
 
 table{
-  
   padding: 0 1em 1em 1em;
-  /* background-color: white; */
-  /* background-image: linear-gradient(rgb(133, 145, 175), rgba(159, 179, 235, 0.781), rgb(133, 145, 175)); */
 }
 
 td, th {
@@ -37,7 +34,6 @@ a {
   text-decoration: none;
   color: black;
 }
-
 a:hover {
   color: blue;
 }

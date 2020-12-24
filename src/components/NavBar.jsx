@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import logo from '../images/EquityX_Logo.png';
+import colors from '../config/colorConfig';
 
 const NavBarContainer = styled.div`
     width: 100%;
     display: flex;
     justify-content: left;
+    background-image: ${colors.navbarBg};
+    padding: 0.5em 0 0 0;
     @media only screen and (max-width: 768px) {
         width: 100%;
         display: flex;
@@ -42,6 +45,7 @@ const TabContainer = styled.div`
     flex-wrap: wrap;
     flex-direction: row;
     
+    
     @media only screen and (max-width: 768px) {
         width: 100%;
     }
@@ -75,7 +79,7 @@ const TabLabel = styled.div`
 
 
     @media only screen and (max-width: 768px) {
-        font-size: 0.5em;
+        font-size: 1em;
     }
     
 `;
@@ -86,11 +90,14 @@ const DropDownContent = styled.div`
     position: absolute;
     font-size: 1em;
     border-top: 1px solid grey;
+    opacity: 1;
+    animation: fade 0.2s linear;
+    background-image: ${colors.navbarBg};
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     
     @media only screen and (max-width: 768px) {
-        font-size: 0.5em;
+        font-size: 1em;
     }
     
 `;
@@ -102,6 +109,8 @@ const NavBar = ({ setSelectedTab }) => {
     const [adminSelected, setAdminSelected] = useState(false);
     const [isShown_productDropdown, setIsShown_productDropdown] = useState(false);
     const [isShown_resourceDropdown, setIsShown_resourceDropdown] = useState(false);
+    const [isShown_partnerDropdown, setIsShown_partnerDropdown] = useState(false);
+    const [isShown_aboutUsDropdown, setIsShown_aboutUsDropdown] = useState(false);
 
     const handleMouseEnter = (tab) => {
         if (tab == "products"){
@@ -109,6 +118,12 @@ const NavBar = ({ setSelectedTab }) => {
         }
         else if (tab == "resources"){
             setIsShown_resourceDropdown(true)
+        }
+        else if (tab == "partners"){
+            setIsShown_partnerDropdown(true)
+        }
+        else if (tab == "aboutUs"){
+            setIsShown_aboutUsDropdown(true)
         }
     };
 
@@ -124,6 +139,18 @@ const NavBar = ({ setSelectedTab }) => {
         }
         else if (tab == "resources" && tabContent == 'resourceDropDownContent'){
             setIsShown_resourceDropdown(true)
+        }
+        else if (tab == "partners" && tabContent == null){
+            setIsShown_partnerDropdown(false)
+        }
+        else if (tab == "partners" && tabContent == 'partnerDropDownContent'){
+            setIsShown_partnerDropdown(true)
+        }
+        else if (tab == "aboutUs" && tabContent == null){
+            setIsShown_aboutUsDropdown(false)
+        }
+        else if (tab == "aboutUs" && tabContent == 'aboutUsDropDownContent'){
+            setIsShown_aboutUsDropdown(true)
         }
      };
 
@@ -160,7 +187,6 @@ const NavBar = ({ setSelectedTab }) => {
                         Products & Solutions
                     </TabLabel>
                 </NavBarTab>
-                
                 <NavBarTab
                 onMouseEnter={() => handleMouseEnter('resources')}
                 onMouseLeave={() => handleMouseLeave('resources')}
@@ -173,7 +199,10 @@ const NavBar = ({ setSelectedTab }) => {
                         Resources
                     </TabLabel>
                 </NavBarTab>
-                <NavBarTab>
+                <NavBarTab
+                onMouseEnter={() => handleMouseEnter('partners')}
+                onMouseLeave={() => handleMouseLeave('partners')}
+                >
                     <TabLabel
                         className="tabLabel"
                         onClick={() => handleClick('about')}
@@ -182,7 +211,10 @@ const NavBar = ({ setSelectedTab }) => {
                         Partners
                     </TabLabel>
                 </NavBarTab>
-                <NavBarTab>
+                <NavBarTab
+                onMouseEnter={() => handleMouseEnter('aboutUs')}
+                onMouseLeave={() => handleMouseLeave('aboutUs')}
+                >
                     <TabLabel
                         className="tabLabel"
                         onClick={() => handleClick('about')}
@@ -241,32 +273,89 @@ const NavBar = ({ setSelectedTab }) => {
             onMouseEnter={() => handleMouseLeave('resources', 'resourceDropDownContent')}
             onMouseLeave={() => handleMouseLeave('resources')}
             >
-                <table id="resourceDropdownTable">
+                <table>
                     <thead>
                         <tr>
-                            <th><a href="/">EquityX Resouces</a></th>
-                            <th><a href="/">Blog</a></th>
+                            <th><a href="/">EquityX Resources</a></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><a href="/">Customer Testimonials</a></td>
-                            <td><a href="/">Blog</a></td>
+                            <td><a href="/">&#128172; Customer Testimonials</a></td>
+                            <td><a href="/">&#9997; Blog</a></td>
                         </tr>
                         <tr>
-                            <td><a href="/">Events & Webinars</a></td>
-                            <td><a href="/">Partner Stories</a></td>
+                            <td><a href="/">&#128197; Events & Webinars</a></td>
+                            <td><a href="/">&#x2B50; Partner Stories</a></td>
                         </tr>
                         <tr>
-                            <td><a href="/">Supports</a></td>
-                            <td><a href="/">Product Education</a></td>
+                            <td><a href="/">&#128718;&#65039; Supports</a></td>
+                            <td><a href="/">&#128214; Product Education</a></td>
                         </tr>
                         <tr>
-                            <td><a href="/">Product Release Notes</a></td>
-                            <td><a href="/">How We Work</a></td>
+                            <td><a href="/">&#128177; Product Release Notes</a></td>
+                            <td><a href="/">&#128269; How We Work</a></td>
                         </tr>
                     </tbody>
                 </table>
+            </DropDownContent>
+        )}
+        {isShown_partnerDropdown && (
+            <DropDownContent
+            id = "partnerDropdown"
+            onMouseEnter={() => handleMouseLeave('partners', 'partnerDropDownContent')}
+            onMouseLeave={() => handleMouseLeave('partners')}
+            >
+                <table>
+                    <thead>
+                        <tr>
+                            <th><a href="/">Partner Resources</a></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="/">&#9878; Law Partners</a></td>
+                            <td><a href="/">&#9072; Why partner with EquityX</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/">&#65130; VC Partners</a></td>
+                            <td><a href="/">&#129309; Become a partner</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/">&#128195; Private Equity Partners</a></td>
+                            <td><a href="/">&#128273; Partner Resource Center</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </DropDownContent>
+        )}
+        {isShown_aboutUsDropdown && (
+            <DropDownContent
+            id = "aboutUsDropdown"
+            onMouseEnter={() => handleMouseLeave('aboutUs', 'aboutUsDropDownContent')}
+            onMouseLeave={() => handleMouseLeave('aboutUs')}
+            >   
+                <table>
+                    <thead>
+                        <tr>
+                            <th><a href="/">About EquityX</a></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="/">Company Info</a></td>
+                            <td><a href="/">Press</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="/">Contact EquityX</a></td>
+                            <td><a href="/">Careers</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
             </DropDownContent>
         )}
         <div>
@@ -279,3 +368,4 @@ const NavBar = ({ setSelectedTab }) => {
 };
 
 export default NavBar;
+// https://www.amp-what.com/unicode/search/share

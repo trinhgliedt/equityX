@@ -5,9 +5,9 @@ import styled from 'styled-components';
 
 
 const Container = styled.div`
-    margin: 0.5% 0.5%;
+    margin: 0 0.5% 0 0.5%;
     height: calc(90vh);
-    padding: 1em 2em;
+    padding: 0 2em 1em 2em;
 `;
 
 function App() {

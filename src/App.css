@@ -38,7 +38,12 @@
 }
 
 * {
-    /* outline: 1px solid grey; */
+    /* outline: 1px solid lightyellow; */
+    -webkit-text-size-adjust: none;
+    @media only screen and (max-width: 768px) {
+      font-size: 0.5em;
+
+    }
 }
 
 .tabLabel::after {
@@ -46,7 +51,21 @@
   font-size: 1em;
 }
 
-table, th, td {
-  /* font-size: 0.7em; */
-  /* background-color: white; */
+table{
+  
+  padding: 0 1em 1em 1em;
+  background-color: white;
+}
+
+td, th {
+  text-align: left;
+  padding: 0.5em 1em;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: blue;
 }

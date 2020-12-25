@@ -8,17 +8,12 @@ const NavBarContainer = styled.div`
     display: flex;
     justify-content: left;
     background-image: ${colors.navbarBg};
-    padding: 0.5em 0 0 0;
-    @media only screen and (max-width: 768px) {
-        width: 100%;
-        display: flex;
-        justify-content: left;
-    }
+    padding: 0.5em 0em 0 0;
 `;
 
 const Logo = styled.div`
     padding: 0 0 0 1em;
-    width: 10em;
+    width: 12em;
     align-self: flex-end;
     @media only screen and (max-width: 768px) {
         width: 7em;
@@ -27,20 +22,26 @@ const Logo = styled.div`
 `;
 
 const Demo = styled.div`
-    padding: 0 0.2em;
-    width: 10em;
+    padding: 0.2em 0.2em;   
+    width: 9em;
     align-self: flex-end;
     margin-left: 0.5%;
-    margin-bottom: 1%;
+    margin-bottom: 0.8%;
+    margin-right: 1%;
+    text-align: center;
     @media only screen and (max-width: 768px) {
         font-size: 0.7em;
         align-self: center;
     }
+    background-image: ${colors.gold};
+    border-radius: 0.2em;
+    box-shadow: 0 0.5em 0.5em 0 rgba(0, 0, 0, 0.616);
+    z-index: 1;
 `;
 
 const TabContainer = styled.div`
     height: 100%;
-    width: 90%;
+    width: 80%;
     display: flex;
     align-self: flex-end;
     justify-content: center;
@@ -83,17 +84,16 @@ const TabLabel = styled.div`
     
 `;
 const DropDownContent = styled.div`
-    width: 42em;
-    margin-left: 20%;
-    background-color: white;
+    width: 39em;
+    margin-left: 22.5%;
     position: absolute;
     font-size: 1em;
     border-top: 1px solid grey;
     opacity: 1;
     animation: fade 0.8s linear;
     border-radius: 0 0 0.5em 0.5em;
-    background-image: ${colors.navbarBg};
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-image: ${colors.dropdownMenuBg};
+    box-shadow: 0 1em 1em 0 rgba(0,0,0,0.2);
     z-index: 1;
     
     @media only screen and (max-width: 768px) {
@@ -103,70 +103,54 @@ const DropDownContent = styled.div`
 `;
 
 const NavBar = ({ setSelectedTab }) => {
-    const [aboutSelected, setAboutSelected] = useState(true);
-    const [toolSelected, setToolSelected] = useState(false);
-    const [tutorialSelected, setTutorialSelected] = useState(false);
-    const [adminSelected, setAdminSelected] = useState(false);
     const [isShown_productDropdown, setIsShown_productDropdown] = useState(false);
     const [isShown_resourceDropdown, setIsShown_resourceDropdown] = useState(false);
     const [isShown_partnerDropdown, setIsShown_partnerDropdown] = useState(false);
     const [isShown_aboutUsDropdown, setIsShown_aboutUsDropdown] = useState(false);
 
+
     const handleMouseEnter = (tab) => {
-        if (tab == "products"){
+        if (tab === "products"){
             setIsShown_productDropdown(true)
         }
-        else if (tab == "resources"){
+        else if (tab === "resources"){
             setIsShown_resourceDropdown(true)
         }
-        else if (tab == "partners"){
+        else if (tab === "partners"){
             setIsShown_partnerDropdown(true)
         }
-        else if (tab == "aboutUs"){
+        else if (tab === "aboutUs"){
             setIsShown_aboutUsDropdown(true)
         }
     };
 
     const handleMouseLeave= (tab, tabContent=null) => {
-        if (tab == "products" && tabContent == null){
+        if (tab === "products" && tabContent === null){
             setIsShown_productDropdown(false)
         }
-        else if (tab == "products" && tabContent == 'productDropDownContent'){
+        else if (tab === "products" && tabContent === 'productDropDownContent'){
             setIsShown_productDropdown(true)
         }
-        else if (tab == "resources" && tabContent == null){
+        else if (tab === "resources" && tabContent === null){
             setIsShown_resourceDropdown(false)
         }
-        else if (tab == "resources" && tabContent == 'resourceDropDownContent'){
+        else if (tab === "resources" && tabContent === 'resourceDropDownContent'){
             setIsShown_resourceDropdown(true)
         }
-        else if (tab == "partners" && tabContent == null){
+        else if (tab === "partners" && tabContent === null){
             setIsShown_partnerDropdown(false)
         }
-        else if (tab == "partners" && tabContent == 'partnerDropDownContent'){
+        else if (tab === "partners" && tabContent === 'partnerDropDownContent'){
             setIsShown_partnerDropdown(true)
         }
-        else if (tab == "aboutUs" && tabContent == null){
+        else if (tab === "aboutUs" && tabContent === null){
             setIsShown_aboutUsDropdown(false)
         }
-        else if (tab == "aboutUs" && tabContent == 'aboutUsDropDownContent'){
+        else if (tab === "aboutUs" && tabContent === 'aboutUsDropDownContent'){
             setIsShown_aboutUsDropdown(true)
         }
      };
 
-
-    const handleClick = (tab) => {
-        setAboutSelected(false);
-        setToolSelected(false);
-        setTutorialSelected(false);
-        setAdminSelected(false);
-        // if (tab === 'about') setAboutSelected(true);
-        // else if (tab === 'tool') setToolSelected(true);
-        // else if (tab === 'tutorial') setTutorialSelected(true);
-        // else setAdminSelected(true);
-
-        // setSelectedTab(tab);
-    };
     return (
         <>
         <NavBarContainer>
@@ -251,7 +235,7 @@ const NavBar = ({ setSelectedTab }) => {
                         <tr>
                             <td><a href="/">Private Company Liquidity</a></td>
                             <td><a href="/">Portfolio Insights</a></td>
-                            <td><a href="/"></a></td>
+                            <td></td>
                         </tr>
                     </tbody>
                 </table>
@@ -348,11 +332,6 @@ const NavBar = ({ setSelectedTab }) => {
                 
             </DropDownContent>
         )}
-        <div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi tempora distinctio dolore nisi repellat ea iure fugit, magnam laboriosam animi corrupti vero ex possimus reiciendis beatae velit rerum fuga ut!. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad non totam debitis nesciunt aliquam, similique alias, quia tempore recusandae accusamus minus corrupti iure necessitatibus repellat provident nisi sequi amet ullam?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi tempora distinctio dolore nisi repellat ea iure fugit, magnam laboriosam animi corrupti vero ex possimus reiciendis beatae velit rerum fuga ut!. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad non totam debitis nesciunt aliquam, similique alias, quia tempore recusandae accusamus minus corrupti iure necessitatibus repellat provident nisi sequi amet ullam?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi tempora distinctio dolore nisi repellat ea iure fugit, magnam laboriosam animi corrupti vero ex possimus reiciendis beatae velit rerum fuga ut!. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad non totam debitis nesciunt aliquam, similique alias, quia tempore recusandae accusamus minus corrupti iure necessitatibus repellat provident nisi sequi amet ullam?</p>
-        </div>
     </>
     );
 };

@@ -24,6 +24,9 @@
 
 table{
   padding: 0 1em 1em 1em;
+  /* background-image: linear-gradient(rgb(133, 145, 175), rgb(159, 179, 235), rgba(133, 145, 175)); */
+  /* box-shadow: 0 0.5em 0.5em 0 rgba(0, 0, 0, 0.616); */
+  
 }
 
 td, th {
@@ -39,7 +42,56 @@ a:hover {
 }
 
 @keyframes fade {
-  0%{ opacity: 0.8 }
-  50% { opacity: 0.9 }
+  0%{ opacity: 0.6 }
+  50% { opacity: 0.8 }
   100% { opacity: 1 }
+}
+
+.rowDiv {
+  display: flex;
+  padding: 2% 2%;
+  margin: 2% 0;
+}
+
+.darkBg {
+  color: rgb(219, 214, 214);
+  background-color: rgb(57,59,60);
+}
+
+.goldBg {
+  color: rgb(219, 214, 214);
+  background-color: rgb(158, 134, 80);
+}
+
+h1 {
+  font-size: 3.5em;
+  margin: 0.2em 0 0.5em 0;
+}
+h2 {
+  margin: 0.5em 0;
+}
+
+.lightBlueFont {
+  color: rgb(141, 219, 219);
+}
+
+.centerDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.fontColor1 {
+  color: rgb(116, 18, 18);
+}
+
+.fontColor2 {
+  color: rgb(28, 97, 38);
+}
+
+.fontColor3 {
+  color: rgb(248,211,39);
 }

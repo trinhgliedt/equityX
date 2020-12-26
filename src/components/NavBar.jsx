@@ -9,15 +9,28 @@ const NavBarContainer = styled.div`
     justify-content: left;
     background-image: ${colors.navbarBg};
     padding: 0.5em 0em 0 0;
+    @media only screen and (max-width: 768px) {
+        padding: 0.1em 0 0 0;
+    }
+    @media only screen and (min-width: 769px) and (max-width: 900px) {
+        padding: 0.05em 0 0 0;
+    }
 `;
 
 const Logo = styled.div`
-    padding: 0 0 0 1em;
     width: 12em;
+    display: flex;
     align-self: flex-end;
     @media only screen and (max-width: 768px) {
-        width: 7em;
+        margin-top: 0.2em;
+        width: 5em;
         align-self: center;
+
+    }
+    @media only screen and (min-width: 769px) and (max-width: 900px) {
+        margin-top: 0.5em;
+        width: 8em;
+
     }
 `;
 
@@ -32,11 +45,11 @@ const Demo = styled.div`
     @media only screen and (max-width: 768px) {
         font-size: 0.7em;
         align-self: center;
+        padding: 0.05em 0.05em; 
     }
     background-image: ${colors.gold};
     border-radius: 0.2em;
     box-shadow: 0 0.5em 0.5em 0 rgba(0, 0, 0, 0.616);
-    z-index: 1;
 `;
 
 const TabContainer = styled.div`
@@ -52,6 +65,9 @@ const TabContainer = styled.div`
     @media only screen and (max-width: 768px) {
         width: 60%;
     }
+    @media only screen and (min-width: 769px) and (max-width: 900px) {
+        width: 60%;
+    }
 `;
 const NavBarTab = styled.div`
     height: 100%;
@@ -60,12 +76,6 @@ const NavBarTab = styled.div`
     padding: 1% 2.5%;
     justify-content: center;
     margin: 0 0.5%;
-    
-    @media only screen and (max-width: 768px) {
-    }
-
-
-    
 `;
 
 const TabLabel = styled.div`
@@ -75,13 +85,12 @@ const TabLabel = styled.div`
     justify-content: center;
     font-size: 1.1em;
     cursor: pointer;
-    
-
-
     @media only screen and (max-width: 768px) {
+        font-size: 0.6em;
+    }
+    @media only screen and (min-width: 769px) and (max-width: 900px) {
         font-size: 0.7em;
     }
-    
 `;
 const DropDownContent = styled.div`
     width: 39em;
@@ -97,10 +106,16 @@ const DropDownContent = styled.div`
     z-index: 1;
     
     @media only screen and (max-width: 768px) {
-        font-size: 1em;
+        margin-left: 0.1em;
+        width: 82%;
     }
-    
+    @media only screen and (min-width: 769px) and (max-width: 900px) {
+        margin-left: 0.3em;
+        width: 90%;
+    }
 `;
+
+
 
 const NavBar = ({ setSelectedTab }) => {
     const [isShown_productDropdown, setIsShown_productDropdown] = useState(false);

@@ -1,20 +1,19 @@
 
-@keyframes App-logo-spin {
-  /* from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  } */
-}
-
 * {
     /* outline: 1px solid lightyellow; */
     text-align: left;
-    @media only screen and (max-width: 768px) {
-      font-size: 0.5em;
+    
+}
 
-    }
+:root {
+  --greenBg: rgb(141, 219, 219);
+  --blackBg: rgb(57,59,60);
+  --goldBg: rgb(158, 134, 80);
+  --whiteFont: rgb(219, 214, 214);
+  --lightRedFont: rgb(116, 18, 18);
+  --lightGreenFont: rgb(28, 97, 38);
+  --yellowFont: rgb(248,211,39);
+  --lightBlueFont: rgb(141, 219, 219);
 }
 
 .tabLabel::after {
@@ -46,21 +45,45 @@ a:hover {
   50% { opacity: 0.8 }
   100% { opacity: 1 }
 }
-
-.rowDiv {
+.rowFlex {
   display: flex;
+}
+.rowFlexCenter {
+  justify-content: center;
+}
+.p2 {
   padding: 2% 2%;
+}
+.px2 {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.p1 {
+  padding: 1% 1%;
+}
+
+.my2x0 {
   margin: 2% 0;
 }
 
+
+.centerText {
+  text-align: center;
+}
+
 .darkBg {
-  color: rgb(219, 214, 214);
-  background-color: rgb(57,59,60);
+  color: var(--whiteFont);
+  background-color: var(--blackBg);
 }
 
 .goldBg {
-  color: rgb(219, 214, 214);
-  background-color: rgb(158, 134, 80);
+  color: var(--whiteFont);
+  background-color: var(--goldBg);
+}
+
+.greenBg {
+  color: var(--whiteFont);
+  background-color: var(--greenBg);
 }
 
 h1 {
@@ -72,7 +95,7 @@ h2 {
 }
 
 .lightBlueFont {
-  color: rgb(141, 219, 219);
+  color: var(--lightBlueFont);
 }
 
 .centerDiv {
@@ -85,13 +108,73 @@ h2 {
 }
 
 .fontColor1 {
-  color: rgb(116, 18, 18);
+  color: var(--lightRedFont);
 }
 
 .fontColor2 {
-  color: rgb(28, 97, 38);
+  color: var(--lightGreenFont);
 }
 
 .fontColor3 {
-  color: rgb(248,211,39);
+  color: (var(--yellowFont));
+}
+
+.sectorImg {
+  height: 13em;
+  
+}
+
+
+@media only screen and (max-width: 768px) {
+  .sectorImg {
+    height: 6em;
+  }
+  h1 {
+    font-size: 1.2em;
+  }
+  h2 {
+    font-size: 0.8em;
+  }
+  p {
+    font-size: 0.6em;
+  }
+  a{
+    font-size: 0.7em;
+  }
+  table{
+    padding: 0 0.2em 0.2em 0.2em;
+    margin-left: 0;
+  }
+  td, th {
+    text-align: left;
+    padding: 0.1em 0.2em;
+    font-size: 0.6em;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 900px) {
+  .sectorImg {
+    height: 8em;
+  }
+  h1 {
+    font-size: 1em;
+  }
+  h2 {
+    font-size: 0.75em;
+  }
+  p {
+    font-size: 0.7em;
+  }
+  a{
+    font-size: 0.7em;
+  }
+  table{
+    padding: 0 0.2em 0.2em 0.2em;
+    margin-left: 0;
+  }
+  td, th {
+    text-align: left;
+    padding: 0.1em 0.2em;
+    font-size: 0.7em;
+  }
 }

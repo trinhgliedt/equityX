@@ -6,7 +6,7 @@
 }
 
 :root {
-  --greenBg: rgb(141, 219, 219);
+  --greenBg: rgb(95,136,119);
   --blackBg: rgb(57,59,60);
   --goldBg: rgb(158, 134, 80);
   --whiteFont: rgb(219, 214, 214);
@@ -47,12 +47,21 @@ a:hover {
 }
 .rowFlex {
   display: flex;
+  justify-content: space-between;
 }
 .rowFlexCenter {
   justify-content: center;
 }
 .p2 {
   padding: 2% 2%;
+}
+.py2 {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.px1 {
+  padding-left: 1%;
+  padding-right: 1%;
 }
 .px2 {
   padding-left: 2%;
@@ -62,6 +71,9 @@ a:hover {
   padding: 1% 1%;
 }
 
+.m0 {
+  margin: 0;
+}
 .my2x0 {
   margin: 2% 0;
 }
@@ -127,7 +139,7 @@ h2 {
 
 @media only screen and (max-width: 768px) {
   .sectorImg {
-    height: 6em;
+    height: 4em;
   }
   h1 {
     font-size: 1.2em;
@@ -135,12 +147,16 @@ h2 {
   h2 {
     font-size: 0.8em;
   }
-  p {
+  h3 {
     font-size: 0.6em;
+  }
+  p {
+    font-size: 0.5em;
   }
   a{
     font-size: 0.7em;
   }
+  
   table{
     padding: 0 0.2em 0.2em 0.2em;
     margin-left: 0;
@@ -150,11 +166,12 @@ h2 {
     padding: 0.1em 0.2em;
     font-size: 0.6em;
   }
+  
 }
 
 @media only screen and (min-width: 769px) and (max-width: 900px) {
   .sectorImg {
-    height: 8em;
+    height: 7em;
   }
   h1 {
     font-size: 1em;
@@ -168,6 +185,7 @@ h2 {
   a{
     font-size: 0.7em;
   }
+  
   table{
     padding: 0 0.2em 0.2em 0.2em;
     margin-left: 0;

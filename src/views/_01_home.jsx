@@ -53,18 +53,19 @@ const Column33Div = styled.div`
     margin: 0 1em;
     border: 1px solid silver;
     @media only screen and (max-width: 768px) {
-        font-size: 0.5em;
-        margin: 0 0.3em;
-        padding: 0 0.7% 1% 0.7%;
+        font-size: 1em;
+        margin: 0 0.2em;
+        padding: 0 0.6% 1% 0.6%;
     }
     @media only screen and (min-width: 769px) and (max-width: 900px) {
+        font-size: 1em;
         margin: 0 0.3em;
     }
 `;
 
 const Row1ofColumn33 = styled.div`
     @media only screen and (max-width: 768px) {
-        min-height: 9em;
+        min-height: 6em;
     }
     @media only screen and (min-width: 769px) and (max-width: 900px) {
         min-height: 8em;
@@ -87,7 +88,7 @@ const HomePage = ({ }) => {
                 <img src={pieChart} width="100%" alt="pie chart"/>
             </Column30Div>
         </div>
-        <div className="rowFlex p2 my2x0 goldBg">
+        <div className="rowFlex py2 px1 my2x0 goldBg">
             <Column33Div>
                 <Row1ofColumn33>
                     <h3 className="fontColor1">Private Companies</h3>
@@ -121,12 +122,48 @@ const HomePage = ({ }) => {
 
         </div>
         <div className="p1 greenBg">
-            <h3 className="lightBlueFont centerText">Join EquityX</h3>
+            <h3 className="lightBlueFont centerText m0">Join EquityX</h3>
             <h2 className="centerText">Get in touch to discuss plans and pricing</h2>
             <div className="rowFlex rowFlexCenter greenBg">
                 <Demo classNme = ""><a href="/">Request a Demo</a></Demo>
             </div>
         </div >
+        <div className="rowFlex p2 darkBg">
+            <div>
+                <h3>COMPANIES</h3>
+                <p><a src="/">Plans & pricing</a></p>
+                <p><a src="/">Board consents</a></p>
+                <p><a src="/">Liquidity</a></p>
+                <p><a src="/">Products for public companies</a></p>
+            </div>
+            <div>
+                <h3>INVESTORS</h3>
+                <p><a src="/">Plans for investors</a></p>
+                <p><a src="/">Fund administration</a></p>
+                <p><a src="/">ASC 820</a></p>
+                <p><a src="/">Capital call line of credit</a></p>
+            </div>
+            <div>
+                <h3>RESOURCES</h3>
+                <p><a src="/">Video tour</a></p>
+                <p><a src="/">Support</a></p>
+                <p><a src="/">Employee resources</a></p>
+                <p><a src="/">Product release notes</a></p>
+            </div>
+            <div>
+                <h3>PARTNERS</h3>
+                <p><a src="/">Law firm partners</a></p>
+                <p><a src="/">VC partners</a></p>
+                <p><a src="/">Private Equity partners</a></p>
+            </div>
+            <div>
+                <h3>ABOUT US</h3>
+                <p><a src="/">Company</a></p>
+                <p><a src="/">Careers</a></p>
+                <p><a src="/">Press</a></p>
+                <p><a src="/">Contact us</a></p>
+            </div>
+        </div>
         </>
     );
 

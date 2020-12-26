@@ -6,7 +6,7 @@ const ContactForm = ({ setSelectedTab }) => {
         <form>
             <input placeholder="Company email" name="companyEmail"></input>
             <select>
-                
+            
             </select>
         </form>
     );

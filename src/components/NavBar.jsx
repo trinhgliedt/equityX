@@ -4,16 +4,16 @@ import logo from '../images/EquityX_Logo.png';
 import colors from '../config/colorConfig';
 
 const NavBarContainer = styled.div`
-    width: 100%;
+    width: 97.36%;
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     background-image: ${colors.navbarBg};
-    padding: 0.5em 0em 0 0;
+    padding: 0.5em 1em 0 1em;
     @media only screen and (max-width: 768px) {
-        padding: 0.1em 0 0 0;
+        padding: 0.1em 0.5em 0 0.5em;
     }
     @media only screen and (min-width: 769px) and (max-width: 900px) {
-        padding: 0.05em 0 0 0;
+        padding: 0.1em 0.5em 0 0.5em;
     }
 `;
 
@@ -54,7 +54,7 @@ const Demo = styled.div`
 
 const TabContainer = styled.div`
     height: 100%;
-    width: 80%;
+    width: 68%;
     display: flex;
     align-self: flex-end;
     justify-content: center;
@@ -167,7 +167,7 @@ const NavBar = ({ setSelectedTab }) => {
      };
 
     return (
-        <>
+        <div className="sticky">
         <NavBarContainer>
             <Logo><img src={logo} alt="logo" width="100%"/></Logo>
             <TabContainer>
@@ -213,9 +213,9 @@ const NavBar = ({ setSelectedTab }) => {
                     </TabLabel>
                 </NavBarTab>
             </TabContainer>
-        <Demo>
-            <a href="/">Request a Demo</a>
-        </Demo>
+            <Demo>
+                <a href="/">Request a Demo</a>
+            </Demo>
         </NavBarContainer>
         {isShown_productDropdown && (
             <DropDownContent
@@ -347,7 +347,7 @@ const NavBar = ({ setSelectedTab }) => {
                 
             </DropDownContent>
         )}
-    </>
+    </div>
     );
 };
 

@@ -91,7 +91,7 @@ const HomePage = ({ }) => {
         <div className="rowFlex py2 px1 my2x0 goldBg">
             <Column33Div>
                 <Row1ofColumn33>
-                    <h3 className="fontColor1">Private Companies</h3>
+                    <h3 className="orangeFont">Private Companies</h3>
                     <p className="bold">Streamline how you manage equity from founding to IPO</p>
                     <p>Cap table software, secondaries & 409 valuations</p>
                 </Row1ofColumn33>
@@ -101,7 +101,7 @@ const HomePage = ({ }) => {
             </Column33Div>
             <Column33Div>
                 <Row1ofColumn33>
-                    <h3 className="fontColor2">Public Companies</h3>
+                    <h3 className="lightGreenFont">Public Companies</h3>
                     <p className="bold">Streamline how you manage equity after IPO</p>
                     <p>Maintain your cap table and running quarterly 409A valuations</p>
                 </Row1ofColumn33>
@@ -111,7 +111,7 @@ const HomePage = ({ }) => {
             </Column33Div>
             <Column33Div>
                 <Row1ofColumn33>
-                    <h3 className="fontColor3">Investors</h3>
+                    <h3 className="blueFont">Investors</h3>
                     <p className="bold">Modernize how you manage your portfolio and back office</p>
                     <p>Fund admin, valuation, scenario modeling & portfolio insights</p>
                 </Row1ofColumn33>
@@ -130,38 +130,38 @@ const HomePage = ({ }) => {
         </div >
         <div className="rowFlex p2 darkBg">
             <div>
-                <h3>COMPANIES</h3>
-                <p><a src="/">Plans & pricing</a></p>
-                <p><a src="/">Board consents</a></p>
-                <p><a src="/">Liquidity</a></p>
-                <p><a src="/">Products for public companies</a></p>
+                <h3 className="lightBlueFont">COMPANIES</h3>
+                <p><a className="whiteFont lightBlueHover" src="/">Plans & pricing</a></p>
+                <p><a className="whiteFont lightBlueHover" src="/">Board consents</a></p>
+                <p><a className="whiteFont lightBlueHover" src="/">Liquidity</a></p>
+                <p><a className="whiteFont lightBlueHover" src="/">Products for public companies</a></p>
             </div>
             <div>
-                <h3>INVESTORS</h3>
-                <p><a src="/">Plans for investors</a></p>
-                <p><a src="/">Fund administration</a></p>
-                <p><a src="/">ASC 820</a></p>
-                <p><a src="/">Capital call line of credit</a></p>
+                <h3 className="purpleFont">INVESTORS</h3>
+                <p><a className="whiteFont purpleHover" src="/">Plans for investors</a></p>
+                <p><a className="whiteFont purpleHover" src="/">Fund administration</a></p>
+                <p><a className="whiteFont purpleHover" src="/">ASC 820</a></p>
+                <p><a className="whiteFont purpleHover" src="/">Capital call line of credit</a></p>
             </div>
             <div>
-                <h3>RESOURCES</h3>
-                <p><a src="/">Video tour</a></p>
-                <p><a src="/">Support</a></p>
-                <p><a src="/">Employee resources</a></p>
-                <p><a src="/">Product release notes</a></p>
+                <h3 className="lightGreenFont">RESOURCES</h3>
+                <p><a className="whiteFont lightGreenHover" src="/">Video tour</a></p>
+                <p><a className="whiteFont lightGreenHover" src="/">Support</a></p>
+                <p><a className="whiteFont lightGreenHover" src="/">Employee resources</a></p>
+                <p><a className="whiteFont lightGreenHover" src="/">Product release notes</a></p>
             </div>
             <div>
-                <h3>PARTNERS</h3>
-                <p><a src="/">Law firm partners</a></p>
-                <p><a src="/">VC partners</a></p>
-                <p><a src="/">Private Equity partners</a></p>
+                <h3 className="whiteFont lightRedFont">PARTNERS</h3>
+                <p><a className="whiteFont lightRedHover" src="/">Law firm partners</a></p>
+                <p><a className="whiteFont lightRedHover" src="/">VC partners</a></p>
+                <p><a className="whiteFont lightRedHover" src="/">Private Equity partners</a></p>
             </div>
             <div>
-                <h3>ABOUT US</h3>
-                <p><a src="/">Company</a></p>
-                <p><a src="/">Careers</a></p>
-                <p><a src="/">Press</a></p>
-                <p><a src="/">Contact us</a></p>
+                <h3 className="orangeFont">ABOUT US</h3>
+                <p><a className="whiteFont orangeHover" src="/">Company</a></p>
+                <p><a className="whiteFont orangeHover" src="/">Careers</a></p>
+                <p><a className="whiteFont orangeHover" src="/">Press</a></p>
+                <p><a className="whiteFont orangeHover" src="/">Contact us</a></p>
             </div>
         </div>
         </>

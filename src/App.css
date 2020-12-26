@@ -7,13 +7,19 @@
 
 :root {
   --greenBg: rgb(95,136,119);
-  --blackBg: rgb(57,59,60);
+  --blackBg: rgb(78, 79, 80);
   --goldBg: rgb(158, 134, 80);
-  --whiteFont: rgb(219, 214, 214);
-  --lightRedFont: rgb(116, 18, 18);
-  --lightGreenFont: rgb(28, 97, 38);
-  --yellowFont: rgb(248,211,39);
+  --whiteFont: rgb(238, 234, 234);
+  --pureWhiteFont: rgb(219, 214, 214);
+  --darkRedFont: rgb(116, 18, 18);
+  --lightRedFont: rgb(241, 121, 121);
+  --darkGreenFont: rgb(28, 97, 38);
+  --lightGreenFont: rgb(119, 233, 42);
+  --orangeFont: orange;
+  --yellowFont: yellow;
+  --purpleFont: rgb(235, 80, 235);
   --lightBlueFont: rgb(141, 219, 219);
+  --blueFont: rgb(47,63,147);
 }
 
 .tabLabel::after {
@@ -35,11 +41,74 @@ td, th {
 a {
   text-decoration: none;
   color: black;
+  cursor: pointer;
+}
+.blackFont {
+  color: black;
+}
+
+.purpleFont {
+  color: var(--purpleFont);
+}
+.orangeFont {
+  color: var(--orangeFont);
+}
+
+
+.lightBlueFont {
+  color: var(--lightBlueFont);
+}
+.blueFont{
+  color: var(--blueFont);
+}
+
+.lightRedFont {
+  color: var(--lightRedFont);
+}
+
+.darkRedFont {
+  color: var(--darkRedFont);
+}
+
+.lightGreenFont {
+  color: var(--lightGreenFont);
+}
+
+.darkGreenFont {
+  color: var(--darkGreenFont);
+}
+
+.yellowFont {
+  color: var(--yellowFont);
+}
+
+.whiteFont {
+  color: var(--whiteFont);
+}
+
+.lightBlueHover:hover {
+  color: var(--lightBlueFont);
+}
+.purpleHover:hover {
+  color: var(--purpleFont);
+}
+.lightGreenHover:hover {
+  color: var(--lightGreenFont);
+}
+.lightRedHover:hover {
+  color: var(--lightRedFont);
+}
+.orangeHover:hover {
+  color: var(--orangeFont);
 }
 a:hover {
   color: blue;
 }
-
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
 @keyframes fade {
   0%{ opacity: 0.6 }
   50% { opacity: 0.8 }
@@ -106,10 +175,6 @@ h2 {
   margin: 0.5em 0;
 }
 
-.lightBlueFont {
-  color: var(--lightBlueFont);
-}
-
 .centerDiv {
   display: flex;
   justify-content: center;
@@ -117,18 +182,6 @@ h2 {
 
 .bold {
   font-weight: bold;
-}
-
-.fontColor1 {
-  color: var(--lightRedFont);
-}
-
-.fontColor2 {
-  color: var(--lightGreenFont);
-}
-
-.fontColor3 {
-  color: (var(--yellowFont));
 }
 
 .sectorImg {

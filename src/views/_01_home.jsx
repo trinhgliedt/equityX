@@ -89,7 +89,7 @@ const HomePage = ({ }) => {
         <>
         <div className="rowFlex rowSpaceBetweenContent p2 my2x0 darkBg">
             <Column70Div>
-                <h2 className="lightBlueFont">Why EquityX?</h2>
+                <h2 className="lightGreenFont">Why EquityX?</h2>
                 <h1>Equity. Simplified.</h1>
                 <p>EquityX helps companies and investors manage their cap tables, valuation, investments, and equity plans.</p>
                 <Demo

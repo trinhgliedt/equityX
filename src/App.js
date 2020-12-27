@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import colors from '../src/config/colorConfig';
 import NavBar from './components/NavBar.jsx'
 import HomePage from './views/_01_home.jsx';
+import ContactForm from "./components/ContactForm";
 
 const Container = styled.div`
     margin: 0 auto;
@@ -25,7 +26,7 @@ function App() {
       <Container className="App">
         <NavBar />
         <HomePage />
-
+        {/* <ContactForm /> */}
       </Container>
   );
 }

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import logo from '../images/EquityX_Logo.png';
 import colors from '../config/colorConfig';
+import ContactForm from "./ContactForm";
 
 const NavBarContainer = styled.div`
     width: 97.36%;
@@ -50,6 +51,7 @@ const Demo = styled.div`
     background-image: ${colors.gold};
     border-radius: 0.2em;
     box-shadow: 0 0.5em 0.5em 0 rgba(0, 0, 0, 0.616);
+    cursor: pointer;
 `;
 
 const TabContainer = styled.div`
@@ -94,7 +96,7 @@ const TabLabel = styled.div`
 `;
 const DropDownContent = styled.div`
     width: 39em;
-    margin-left: 22.5%;
+    margin-left: 25%;
     position: absolute;
     font-size: 1em;
     border-top: 1px solid grey;
@@ -164,7 +166,14 @@ const NavBar = ({ setSelectedTab }) => {
         else if (tab === "aboutUs" && tabContent === 'aboutUsDropDownContent'){
             setIsShown_aboutUsDropdown(true)
         }
-     };
+    };
+
+    const [isShown_ContactForm, setIsShown_ContactForm] = useState(false);
+    const handleDemoRequest=() => {
+        if (isShown_ContactForm === false) {
+            setIsShown_ContactForm(true);
+        }
+    }
 
     return (
         <div className="sticky">
@@ -213,8 +222,9 @@ const NavBar = ({ setSelectedTab }) => {
                     </TabLabel>
                 </NavBarTab>
             </TabContainer>
-            <Demo>
-                <a href="/">Request a Demo</a>
+            <Demo 
+            onClick={() => handleDemoRequest()}>
+                Request a Demo
             </Demo>
         </NavBarContainer>
         {isShown_productDropdown && (
@@ -346,6 +356,9 @@ const NavBar = ({ setSelectedTab }) => {
                 </table>
                 
             </DropDownContent>
+        )}
+        {isShown_ContactForm && (
+            <ContactForm />
         )}
     </div>
     );

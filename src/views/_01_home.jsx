@@ -5,11 +5,13 @@ import pieChart from "../images/pi_chart.png";
 import privateCo from "../images/privateCo.png";
 import publicCo from "../images/publicCo.png";
 import investors from "../images/investors.png";
+import ContactForm from "../components/ContactForm";
 
 const Demo = styled.div`
     padding: 0.2em 0.2em;
     width: 8em;
     text-align: center;
+    color: black;
     margin-left: 0.5%;
     margin-bottom: 1%;
     @media only screen and (max-width: 768px) {
@@ -20,6 +22,7 @@ const Demo = styled.div`
     background-image: ${colors.gold};
     border-radius: 0.2em;
     box-shadow: 0 0.5em 0.5em 0 rgba(0, 0, 0, 0.616);
+    cursor: pointer;
 
 `;
 const Column70Div = styled.div`
@@ -75,23 +78,32 @@ const Row1ofColumn33 = styled.div`
 
 
 const HomePage = ({ }) => { 
+    const [isShown_ContactForm, setIsShown_ContactForm] = useState(false);
+    const handleDemoRequest=() => {
+        if (isShown_ContactForm === false) {
+            setIsShown_ContactForm(true);
+        }
+    }
+
     return (
         <>
-        <div className="rowFlex p2 my2x0 darkBg">
+        <div className="rowFlex rowSpaceBetweenContent p2 my2x0 darkBg">
             <Column70Div>
                 <h2 className="lightBlueFont">Why EquityX?</h2>
                 <h1>Equity. Simplified.</h1>
                 <p>EquityX helps companies and investors manage their cap tables, valuation, investments, and equity plans.</p>
-                <Demo><a href="/">Request a Demo</a></Demo>
+                <Demo
+                onClick={() => handleDemoRequest()}
+                >Request a Demo</Demo>
             </Column70Div>
             <Column30Div>
                 <img src={pieChart} width="100%" alt="pie chart"/>
             </Column30Div>
         </div>
-        <div className="rowFlex py2 px1 my2x0 goldBg">
+        <div className="rowFlex rowSpaceBetweenContent py2 px1 my2x0 goldBg">
             <Column33Div>
                 <Row1ofColumn33>
-                    <h3 className="orangeFont">Private Companies</h3>
+                    <h3 className="yellowFont">Private Companies</h3>
                     <p className="bold">Streamline how you manage equity from founding to IPO</p>
                     <p>Cap table software, secondaries & 409 valuations</p>
                 </Row1ofColumn33>
@@ -111,7 +123,7 @@ const HomePage = ({ }) => {
             </Column33Div>
             <Column33Div>
                 <Row1ofColumn33>
-                    <h3 className="blueFont">Investors</h3>
+                    <h3 className="darkRedFont">Investors</h3>
                     <p className="bold">Modernize how you manage your portfolio and back office</p>
                     <p>Fund admin, valuation, scenario modeling & portfolio insights</p>
                 </Row1ofColumn33>
@@ -124,11 +136,13 @@ const HomePage = ({ }) => {
         <div className="p1 greenBg">
             <h3 className="lightBlueFont centerText m0">Join EquityX</h3>
             <h2 className="centerText">Get in touch to discuss plans and pricing</h2>
-            <div className="rowFlex rowFlexCenter greenBg">
-                <Demo classNme = ""><a href="/">Request a Demo</a></Demo>
+            <div className="rowFlex rowSpaceBetweenContent rowCenterContent greenBg">
+                <Demo 
+                onClick={() => handleDemoRequest()}
+                className = "">Request a Demo</Demo>
             </div>
         </div >
-        <div className="rowFlex p2 darkBg">
+        <div className="rowFlex rowSpaceBetweenContent p2 darkBg">
             <div>
                 <h3 className="lightBlueFont">COMPANIES</h3>
                 <p><a className="whiteFont lightBlueHover" src="/">Plans & pricing</a></p>
@@ -151,7 +165,7 @@ const HomePage = ({ }) => {
                 <p><a className="whiteFont lightGreenHover" src="/">Product release notes</a></p>
             </div>
             <div>
-                <h3 className="whiteFont lightRedFont">PARTNERS</h3>
+                <h3 className="lightRedFont">PARTNERS</h3>
                 <p><a className="whiteFont lightRedHover" src="/">Law firm partners</a></p>
                 <p><a className="whiteFont lightRedHover" src="/">VC partners</a></p>
                 <p><a className="whiteFont lightRedHover" src="/">Private Equity partners</a></p>
@@ -164,6 +178,9 @@ const HomePage = ({ }) => {
                 <p><a className="whiteFont orangeHover" src="/">Contact us</a></p>
             </div>
         </div>
+        {isShown_ContactForm && (
+            <ContactForm />
+        )}
         </>
     );
 

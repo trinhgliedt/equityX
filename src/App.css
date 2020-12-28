@@ -22,6 +22,7 @@
   --lightBlueFont: rgb(141, 219, 219);
   --blueFont: rgb(47,63,147);
   --inputBg: rgb(230, 224, 224);
+  --blueBg: linear-gradient(rgba(133, 145, 175, 0.637), rgba(159, 179, 235, 0.644), rgba(133, 145, 175, 0.637));
 }
 
 .tabLabel::after {
@@ -147,7 +148,7 @@ select, input {
   border: 1px solid grey;
 }
 
-select, label, input, .demoButton {
+select, label, input, .demoButton, .cancelButton {
   margin-top: 1em;
   font-size: 1.2em;
   padding: 0.5em;
@@ -162,6 +163,16 @@ select, label, input, .demoButton {
   border: none;
   border-radius: 0.2em;
   margin-bottom: 1em;
+  box-shadow: 0 0.5em 0.5em 0 rgba(0, 0, 0, 0.616);
+}
+
+.cancelButton {
+  background-image: var(--blueBg);
+  text-align: center;
+  border: none;
+  border-radius: 0.2em;
+  margin-bottom: 1em;
+  margin-left: 1em;
   box-shadow: 0 0.5em 0.5em 0 rgba(0, 0, 0, 0.616);
 }
 

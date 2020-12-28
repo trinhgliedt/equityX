@@ -1,15 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 
-const ContactForm = ({ setSelectedTab }) => { 
-    const [isShown_ContactForm, setIsShown_ContactForm] = useState(true);
-    const handleDemoRequest=() => {
-        
-        setIsShown_ContactForm(false);
+const ContactForm = ({ displayContactForm }) => { 
+    const handleCancel=() => {
+        displayContactForm( false )
     }
     return (
         <div className="rowFlex rowCenterContent">
-        {isShown_ContactForm && (
             <form className="row">
                 <div className="rowFlex">
                     <input className="" placeholder="Company email" type="email" name="companyEmail" required/>
@@ -76,11 +73,10 @@ const ContactForm = ({ setSelectedTab }) => {
                 <div className="rowFlex rowCenterContent">
                     <button className="demoButton">Request a Demo</button>
                     <button type="reset"
-                    onClick={() => handleDemoRequest()}
-                    className="demoButton">Cancel</button>
+                    onClick={() => handleCancel()}
+                    className="cancelButton">Cancel</button>
                 </div>
             </form>
-            )}
         </div>
     );
 

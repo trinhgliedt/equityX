@@ -337,4 +337,3 @@ const NavBar = ({ displayContactForm }) => {
 };
 
 export default NavBar;
-// https://www.amp-what.com/unicode/search/share

@@ -35,6 +35,7 @@ function App() {
 
   let homePagePropsfromApp = { displayContactForm }
   let navBarPropsfromApp = { displayContactForm }
+  let contactFormPropsfromApp = { displayContactForm }
 
 
   return (
@@ -42,7 +43,7 @@ function App() {
         <NavBar {...navBarPropsfromApp} />
         <HomePage {...homePagePropsfromApp} />
         {isShown_ContactForm && (
-            <ContactForm />
+            <ContactForm {...contactFormPropsfromApp}/>
         )}
       </Container>
   );

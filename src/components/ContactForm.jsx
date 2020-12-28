@@ -1,22 +1,76 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 
 const ContactForm = ({ displayContactForm }) => { 
+    const [companyEmail, setCompanyEmail] = useState("");
+    const [typeOfOrg, setTypeOfOrg] = useState("");
+    const [orgLocation, setOrgLocation] = useState("");
+    const [error, setError] = useState({});
+    const [success, setSuccess] = useState(false);
+
     const handleCancel=() => {
         displayContactForm( false )
     }
+    const handleSubmit= (event) => {
+        event.preventDefault();
+        let sError ={};
+        let errorText = {
+            blank: 'This field is required',
+            notSelected: 'Please make a selection',
+            invalid: 'Please enter a valid value',
+        };
+        // validate:
+        if (companyEmail.length === 0) sError.companyEmail = errorText.blank;
+        if (typeOfOrg.length === 0) sError.typeOfOrg = errorText.blank;
+        if (orgLocation.length === 0) sError.orgLocation = errorText.notSelected;
+        setError(sError);
+        // console.log("orgLocation: ", orgLocation);
+        if (Object.keys(sError).length === 0) {
+            setSuccess(true);
+            setTimeout(function() {
+
+                displayContactForm( false );
+            }, 2500);
+        }
+    }
+    console.log("error: ", error);
     return (
         <div className="rowFlex rowCenterContent">
             <form className="row">
                 <div className="rowFlex">
-                    <input className="" placeholder="Company email" type="email" name="companyEmail" required/>
+                    <input placeholder="Company email" type="email" 
+                    name="companyEmail" 
+                    required
+                    error={error.companyEmail}
+                    onChange={(event) => {
+                        setCompanyEmail(event.target.value);
+                    }}
+                    />
                 </div>
+                {error.companyEmail &&
+                    <div className="redFont">{error.companyEmail}
+                    </div> }
                 <div className="rowFlex">
-                    <input className="" placeholder="Type of organization"  type="text" name="organizationType" required/>
+                    <input placeholder="Type of organization"  type="text" name="organizationType" 
+                    error={error.typeOfOrg}
+                    onChange={(event) => {
+                        setTypeOfOrg(event.target.value);
+                    }}
+                    />
                 </div>
+                {error.typeOfOrg &&
+                    <div className="redFont">{error.typeOfOrg}
+                    </div> }
                 <div className="rowFlex rowSpaceBetweenContent">
                     <label >Organization location: </label>
-                    <select name="states" required>
+                    <select name="states" required
+                    error={error.orgLocation}
+                    defaultValue={0}
+                    onChange={(event) => {
+                        setOrgLocation(event.target.value);
+                    }}
+                    >
+                        <option value="0" disabled>Please select</option>
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
                         <option value="AZ">Arizona</option>
@@ -70,12 +124,20 @@ const ContactForm = ({ displayContactForm }) => {
                         <option value="WY">Wyoming</option>
                     </select>
                 </div>
+                {error.orgLocation &&
+                    <div className="redFont">{error.orgLocation}
+                    </div> }
                 <div className="rowFlex rowCenterContent">
-                    <button className="demoButton">Request a Demo</button>
+                    <button className="demoButton"
+                    onClick={(event) => handleSubmit(event)}
+                    >Request a Demo</button>
                     <button type="reset"
                     onClick={() => handleCancel()}
                     className="cancelButton">Cancel</button>
                 </div>
+                {success &&
+                    <div className="successMsg">Thanks for your request! A member of our team will reach out to you soon!
+                    </div> }
             </form>
         </div>
     );

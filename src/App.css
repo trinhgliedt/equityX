@@ -64,7 +64,9 @@ a {
 .blueFont{
   color: var(--blueFont);
 }
-
+.redFont{
+  color: red;
+}
 .lightRedFont {
   color: var(--lightRedFont);
 }
@@ -76,7 +78,11 @@ a {
 .lightGreenFont {
   color: var(--lightGreenFont);
 }
-
+.successMsg {
+  color: green;
+  font-size: x-large;
+  text-align: center;
+}
 .darkGreenFont {
   color: var(--darkGreenFont);
 }

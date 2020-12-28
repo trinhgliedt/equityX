@@ -33,9 +33,9 @@ function App() {
   };
   console.log("isShown_ContactForm: ", isShown_ContactForm);
 
-  let homePagePropsfromApp = { displayContactForm }
-  let navBarPropsfromApp = { displayContactForm }
-  let contactFormPropsfromApp = { displayContactForm }
+  let homePagePropsfromApp = { displayContactForm };
+  let navBarPropsfromApp = { displayContactForm };
+  let contactFormPropsfromApp = { displayContactForm };
 
 
   return (

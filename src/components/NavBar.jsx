@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import logo from '../images/EquityX_Logo.png';
 import colors from '../config/colorConfig';
-import ContactForm from "./ContactForm";
+import DemoButton from "./DemoButton";
 
 const NavBarContainer = styled.div`
     width: 97.36%;
@@ -33,25 +33,6 @@ const Logo = styled.div`
         width: 8em;
 
     }
-`;
-
-const Demo = styled.div`
-    padding: 0.2em 0.2em;   
-    width: 9em;
-    align-self: flex-end;
-    margin-left: 0.5%;
-    margin-bottom: 0.8%;
-    margin-right: 1%;
-    text-align: center;
-    @media only screen and (max-width: 768px) {
-        font-size: 0.7em;
-        align-self: center;
-        padding: 0.05em 0.05em; 
-    }
-    background-image: ${colors.gold};
-    border-radius: 0.2em;
-    box-shadow: 0 0.5em 0.5em 0 rgba(0, 0, 0, 0.616);
-    cursor: pointer;
 `;
 
 const TabContainer = styled.div`
@@ -119,12 +100,16 @@ const DropDownContent = styled.div`
 
 
 
-const NavBar = ({ setSelectedTab }) => {
+const NavBar = ({ displayContactForm }) => {
     const [isShown_productDropdown, setIsShown_productDropdown] = useState(false);
     const [isShown_resourceDropdown, setIsShown_resourceDropdown] = useState(false);
     const [isShown_partnerDropdown, setIsShown_partnerDropdown] = useState(false);
     const [isShown_aboutUsDropdown, setIsShown_aboutUsDropdown] = useState(false);
 
+    let navBarPropsToDemoButton = {
+        destination: "navBar",
+        displayContactForm,
+    }
 
     const handleMouseEnter = (tab) => {
         if (tab === "products"){
@@ -167,13 +152,6 @@ const NavBar = ({ setSelectedTab }) => {
             setIsShown_aboutUsDropdown(true)
         }
     };
-
-    const [isShown_ContactForm, setIsShown_ContactForm] = useState(false);
-    const handleDemoRequest=() => {
-        if (isShown_ContactForm === false) {
-            setIsShown_ContactForm(true);
-        }
-    }
 
     return (
         <div className="sticky">
@@ -222,10 +200,7 @@ const NavBar = ({ setSelectedTab }) => {
                     </TabLabel>
                 </NavBarTab>
             </TabContainer>
-            <Demo 
-            onClick={() => handleDemoRequest()}>
-                Request a Demo
-            </Demo>
+            <DemoButton {...navBarPropsToDemoButton} />
         </NavBarContainer>
         {isShown_productDropdown && (
             <DropDownContent
@@ -356,9 +331,6 @@ const NavBar = ({ setSelectedTab }) => {
                 </table>
                 
             </DropDownContent>
-        )}
-        {isShown_ContactForm && (
-            <ContactForm />
         )}
     </div>
     );

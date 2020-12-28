@@ -22,11 +22,28 @@ const Container = styled.div`
 
 
 function App() {
+  const [isShown_ContactForm, setIsShown_ContactForm] = useState(false);
+  const displayContactForm = (isDisplayed) => {
+    if (isDisplayed === true & isShown_ContactForm === false) {
+        setIsShown_ContactForm(true);
+    }
+    else if (isDisplayed === false & isShown_ContactForm === true) {
+        setIsShown_ContactForm(false);
+    }
+  };
+  console.log("isShown_ContactForm: ", isShown_ContactForm);
+
+  let homePagePropsfromApp = { displayContactForm }
+  let navBarPropsfromApp = { displayContactForm }
+
+
   return (
       <Container className="App">
-        <NavBar />
-        <HomePage />
-        {/* <ContactForm /> */}
+        <NavBar {...navBarPropsfromApp} />
+        <HomePage {...homePagePropsfromApp} />
+        {isShown_ContactForm && (
+            <ContactForm />
+        )}
       </Container>
   );
 }

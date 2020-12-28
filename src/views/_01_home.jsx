@@ -1,30 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import colors from '../config/colorConfig';
 import pieChart from "../images/pi_chart.png";
 import privateCo from "../images/privateCo.png";
 import publicCo from "../images/publicCo.png";
 import investors from "../images/investors.png";
-import ContactForm from "../components/ContactForm";
+import DemoButton from "../components/DemoButton";
 
-const Demo = styled.div`
-    padding: 0.2em 0.2em;
-    width: 8em;
-    text-align: center;
-    color: black;
-    margin-left: 0.5%;
-    margin-bottom: 1%;
-    @media only screen and (max-width: 768px) {
-        font-size: 0.7em;
-        align-self: center;
-        padding: 0.05em 0.05em; 
-    }
-    background-image: ${colors.gold};
-    border-radius: 0.2em;
-    box-shadow: 0 0.5em 0.5em 0 rgba(0, 0, 0, 0.616);
-    cursor: pointer;
-
-`;
 const Column70Div = styled.div`
     padding: 0;
     width: 65%;
@@ -77,14 +58,21 @@ const Row1ofColumn33 = styled.div`
 `;
 
 
-const HomePage = ({ }) => { 
-    const [isShown_ContactForm, setIsShown_ContactForm] = useState(false);
-    const handleDemoRequest=() => {
-        if (isShown_ContactForm === false) {
-            setIsShown_ContactForm(true);
-        }
+const HomePage = ({ displayContactForm }) => { 
+    // const [isShown_ContactForm, setIsShown_ContactForm] = useState(false);
+    // const displayContactForm = (isDisplayed) => {
+    //     if (isDisplayed === true & isShown_ContactForm === false) {
+    //         setIsShown_ContactForm(true);
+    //     }
+    //     else if (isDisplayed === false & isShown_ContactForm === true) {
+    //         setIsShown_ContactForm(false);
+    //     }
+    // };
+    // console.log("isShown_ContactForm: ", isShown_ContactForm);
+    let homePagePropsToDemoButton = {
+        destination: "homePage",
+        displayContactForm,
     }
-
     return (
         <>
         <div className="rowFlex rowSpaceBetweenContent p2 my2x0 darkBg">
@@ -92,9 +80,7 @@ const HomePage = ({ }) => {
                 <h2 className="lightGreenFont">Why EquityX?</h2>
                 <h1>Equity. Simplified.</h1>
                 <p>EquityX helps companies and investors manage their cap tables, valuation, investments, and equity plans.</p>
-                <Demo
-                onClick={() => handleDemoRequest()}
-                >Request a Demo</Demo>
+                <DemoButton {...homePagePropsToDemoButton} />
             </Column70Div>
             <Column30Div>
                 <img src={pieChart} width="100%" alt="pie chart"/>
@@ -137,50 +123,48 @@ const HomePage = ({ }) => {
             <h3 className="lightBlueFont centerText m0">Join EquityX</h3>
             <h2 className="centerText">Get in touch to discuss plans and pricing</h2>
             <div className="rowFlex rowSpaceBetweenContent rowCenterContent greenBg">
-                <Demo 
-                onClick={() => handleDemoRequest()}
-                className = "">Request a Demo</Demo>
+                <DemoButton {...homePagePropsToDemoButton} />
             </div>
         </div >
         <div className="rowFlex rowSpaceBetweenContent p2 darkBg">
             <div>
                 <h3 className="lightBlueFont">COMPANIES</h3>
-                <p><a className="whiteFont lightBlueHover" src="/">Plans & pricing</a></p>
-                <p><a className="whiteFont lightBlueHover" src="/">Board consents</a></p>
-                <p><a className="whiteFont lightBlueHover" src="/">Liquidity</a></p>
-                <p><a className="whiteFont lightBlueHover" src="/">Products for public companies</a></p>
+                <p><a className="whiteFont lightBlueHover" href="/">Plans & pricing</a></p>
+                <p><a className="whiteFont lightBlueHover" href="/">Board consents</a></p>
+                <p><a className="whiteFont lightBlueHover" href="/">Liquidity</a></p>
+                <p><a className="whiteFont lightBlueHover" href="/">Products for public companies</a></p>
             </div>
             <div>
                 <h3 className="purpleFont">INVESTORS</h3>
-                <p><a className="whiteFont purpleHover" src="/">Plans for investors</a></p>
-                <p><a className="whiteFont purpleHover" src="/">Fund administration</a></p>
-                <p><a className="whiteFont purpleHover" src="/">ASC 820</a></p>
-                <p><a className="whiteFont purpleHover" src="/">Capital call line of credit</a></p>
+                <p><a className="whiteFont purpleHover" href="/">Plans for investors</a></p>
+                <p><a className="whiteFont purpleHover" href="/">Fund administration</a></p>
+                <p><a className="whiteFont purpleHover" href="/">ASC 820</a></p>
+                <p><a className="whiteFont purpleHover" href="/">Capital call line of credit</a></p>
             </div>
             <div>
                 <h3 className="lightGreenFont">RESOURCES</h3>
-                <p><a className="whiteFont lightGreenHover" src="/">Video tour</a></p>
-                <p><a className="whiteFont lightGreenHover" src="/">Support</a></p>
-                <p><a className="whiteFont lightGreenHover" src="/">Employee resources</a></p>
-                <p><a className="whiteFont lightGreenHover" src="/">Product release notes</a></p>
+                <p><a className="whiteFont lightGreenHover" href="/">Video tour</a></p>
+                <p><a className="whiteFont lightGreenHover" href="/">Support</a></p>
+                <p><a className="whiteFont lightGreenHover" href="/">Employee resources</a></p>
+                <p><a className="whiteFont lightGreenHover" href="/">Product release notes</a></p>
             </div>
             <div>
                 <h3 className="lightRedFont">PARTNERS</h3>
-                <p><a className="whiteFont lightRedHover" src="/">Law firm partners</a></p>
-                <p><a className="whiteFont lightRedHover" src="/">VC partners</a></p>
-                <p><a className="whiteFont lightRedHover" src="/">Private Equity partners</a></p>
+                <p><a className="whiteFont lightRedHover" href="/">Law firm partners</a></p>
+                <p><a className="whiteFont lightRedHover" href="/">VC partners</a></p>
+                <p><a className="whiteFont lightRedHover" href="/">Private Equity partners</a></p>
             </div>
             <div>
                 <h3 className="orangeFont">ABOUT US</h3>
-                <p><a className="whiteFont orangeHover" src="/">Company</a></p>
-                <p><a className="whiteFont orangeHover" src="/">Careers</a></p>
-                <p><a className="whiteFont orangeHover" src="/">Press</a></p>
-                <p><a className="whiteFont orangeHover" src="/">Contact us</a></p>
+                <p><a className="whiteFont orangeHover" href="/">Company</a></p>
+                <p><a className="whiteFont orangeHover" href="/">Careers</a></p>
+                <p><a className="whiteFont orangeHover" href="/">Press</a></p>
+                <p><a className="whiteFont orangeHover" href="/">Contact us</a></p>
             </div>
         </div>
-        {isShown_ContactForm && (
+        {/* {isShown_ContactForm && (
             <ContactForm />
-        )}
+        )} */}
         </>
     );
 

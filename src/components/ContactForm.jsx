@@ -18,7 +18,7 @@ const ContactForm = ({ setSelectedTab }) => {
                     <input className="" placeholder="Type of organization"  type="text" name="organizationType" required/>
                 </div>
                 <div className="rowFlex rowSpaceBetweenContent">
-                    <label for="states">Organization location: </label>
+                    <label >Organization location: </label>
                     <select name="states" required>
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>

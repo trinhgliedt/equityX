@@ -1,0 +1,421 @@
+
+* {
+    /* outline: 1px solid lightyellow; */
+    text-align: left;
+    
+}
+
+:root {
+  --greenBg: rgb(95,136,119);
+  --blackBg: rgb(78, 79, 80);
+  --goldBg: rgb(158, 134, 80);
+  --goldButton: linear-gradient(rgb(158, 134, 80), rgb(228, 216, 189), rgb(158, 134, 80));
+  --whiteFont: rgb(238, 234, 234);
+  --pureWhiteFont: rgb(219, 214, 214);
+  --darkRedFont: rgb(116, 18, 18);
+  --lightRedFont: rgb(241, 121, 121);
+  --darkGreenFont: rgb(28, 97, 38);
+  --lightGreenFont: rgb(119, 233, 42);
+  --orangeFont: orange;
+  --yellowFont: yellow;
+  --purpleFont: rgb(235, 80, 235);
+  --lightBlueFont: rgb(141, 219, 219);
+  --blueFont: rgb(47,63,147);
+  --inputBg: rgb(230, 224, 224);
+  --blueBg: linear-gradient(rgba(133, 145, 175, 0.637), rgba(159, 179, 235, 0.644), rgba(133, 145, 175, 0.637));
+  --containerBg: radial-gradient(rgb(133, 145, 175), rgba(131, 146, 187, 0.781), rgb(133, 145, 175));
+}
+
+.sampleContainer {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 10em;
+  background-image: var(--containerBg);
+}
+
+.externalBg {
+ background-image: var(--containerBg);
+}
+
+.tabLabel::after {
+  content: ' \25BF';
+  font-size: 1em;
+}
+
+table{
+  padding: 0 1em 1em 1em;
+  /* background-image: linear-gradient(rgb(133, 145, 175), rgb(159, 179, 235), rgba(133, 145, 175)); */
+  /* box-shadow: 0 0.5em 0.5em 0 rgba(0, 0, 0, 0.616); */
+  
+}
+
+td, th {
+  text-align: left;
+  padding: 0.5em 1em;
+}
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.blackFont {
+  color: black;
+}
+
+.purpleFont {
+  color: var(--purpleFont);
+}
+.orangeFont {
+  color: var(--orangeFont);
+}
+
+
+.lightBlueFont {
+  color: var(--lightBlueFont);
+}
+.blueFont{
+  color: var(--blueFont);
+}
+.redFont{
+  color: red;
+}
+.lightRedFont {
+  color: var(--lightRedFont);
+}
+
+.darkRedFont {
+  color: var(--darkRedFont);
+}
+
+.lightGreenFont {
+  color: var(--lightGreenFont);
+}
+.successMsg {
+  color: green;
+  font-size: x-large;
+  text-align: center;
+}
+.darkGreenFont {
+  color: var(--darkGreenFont);
+}
+
+.yellowFont {
+  color: var(--yellowFont);
+}
+
+.whiteFont {
+  color: var(--whiteFont);
+}
+
+.lightBlueHover:hover {
+  color: var(--lightBlueFont);
+}
+.purpleHover:hover {
+  color: var(--purpleFont);
+}
+.lightGreenHover:hover {
+  color: var(--lightGreenFont);
+}
+.lightRedHover:hover {
+  color: var(--lightRedFont);
+}
+.orangeHover:hover {
+  color: var(--orangeFont);
+}
+a:hover {
+  color: blue;
+}
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+@keyframes fade {
+  0%{ opacity: 0.6 }
+  50% { opacity: 0.8 }
+  100% { opacity: 1 }
+}
+form {
+  background: radial-gradient(rgba(165, 221, 197, 0.719), var(--greenBg));
+  margin: 2em;
+  width: 50%;
+  padding: 2em 4em;
+  border-radius: 0.5em;
+  border: 1.5px solid rgb(117, 149, 134);
+  box-shadow: 0em 2em 2em 0em rgba(0, 0, 0, 0.616);
+
+  /* fix form position */
+  position: fixed;
+  z-index: 9;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input {
+  width: 100%;
+}
+select {
+  width: 50%;
+}
+
+select, input {
+  background-color: var(--inputBg);
+  border-radius: 0.2em;
+  border: 1px solid grey;
+}
+
+select, label, input, .demoButton, .cancelButton {
+  margin-top: 1em;
+  font-size: 1.2em;
+  padding: 0.5em;
+}
+/* select, label {
+  padding: 0.5em;
+} */
+
+.demoButton {
+  background-image: var(--goldButton);
+  text-align: center;
+  border: none;
+  border-radius: 0.2em;
+  margin-bottom: 1em;
+  box-shadow: 0 0.5em 0.5em 0 rgba(0, 0, 0, 0.616);
+}
+
+.cancelButton {
+  background-image: var(--blueBg);
+  text-align: center;
+  border: none;
+  border-radius: 0.2em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  box-shadow: 0 0.5em 0.5em 0 rgba(0, 0, 0, 0.616);
+}
+
+.demoNavBar {
+  padding: 0.2em 0.2em;   
+        width: 9em;
+        align-self: flex-end;
+        margin-left: 0.5%;
+        margin-bottom: 0.8%;
+        margin-right: 1%;
+        text-align: center;
+        background-image: var(--goldButton);
+        border-radius: 0.2em;
+        box-shadow: 0 0.5em 0.5em 0 rgba(0, 0, 0, 0.616);
+        cursor: pointer;
+}
+.demoHome {
+  padding: 0.2em 0.2em;
+        width: 8em;
+        text-align: center;
+        color: black;
+        margin-left: 0.5%;
+        margin-bottom: 1%;
+        background-image: var(--goldButton);
+        border-radius: 0.2em;
+        box-shadow: 0 0.5em 0.5em 0 rgba(0, 0, 0, 0.616);
+        cursor: pointer;
+}
+
+.row {
+  display: block;
+}
+
+.rowFlex {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.rowSpaceBetweenContent {
+  justify-content: space-between;
+}
+
+.rowCenterContent {
+  justify-content: center;
+}
+.p2 {
+  padding: 2% 2%;
+}
+.py2 {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.px1 {
+  padding-left: 1%;
+  padding-right: 1%;
+}
+.px2 {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.p1 {
+  padding: 1% 1%;
+}
+.pb30 {
+  padding-bottom: 30em;
+}
+.pb10 {
+  padding-bottom: 10em;
+}
+.m0 {
+  margin: 0;
+}
+.my2x0 {
+  margin: 2% 0;
+}
+
+
+.centerText {
+  text-align: center;
+}
+
+.darkBg {
+  color: var(--whiteFont);
+  background-color: var(--blackBg);
+}
+
+.goldBg {
+  color: var(--whiteFont);
+  background-color: var(--goldBg);
+}
+
+.greenBg {
+  color: var(--whiteFont);
+  background-color: var(--greenBg);
+}
+
+h1 {
+  font-size: 3.5em;
+  margin: 0.2em 0 0.5em 0;
+}
+h2 {
+  margin: 0.5em 0;
+}
+
+.centerDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.sectorImg {
+  height: 13em;
+  
+}
+
+
+@media only screen and (max-width: 768px) {
+  .sectorImg {
+    height: 4em;
+  }
+  h1 {
+    font-size: 1.2em;
+  }
+  h2 {
+    font-size: 0.8em;
+  }
+  h3 {
+    font-size: 0.6em;
+  }
+  p {
+    font-size: 0.5em;
+  }
+  a{
+    font-size: 0.7em;
+  }
+  
+  table{
+    padding: 0 0.2em 0.2em 0.2em;
+    margin-left: 0;
+  }
+  td, th {
+    text-align: left;
+    padding: 0.1em 0.2em;
+    font-size: 0.6em;
+  }
+  .demoNavBar {
+    font-size: 0.7em;
+    align-self: center;
+    padding: 0.05em 0.05em; 
+  }
+  .demoHome {
+    font-size: 0.7em;
+    align-self: center;
+    padding: 0.05em 0.05em;
+  }
+  form {
+    margin: 1em;
+    width: 80%;
+    padding: 0.5em 1em;
+    border-radius: 0.2em;
+    border: 1px solid rgb(117, 149, 134);
+    box-shadow: 0em 1em 1em 0em rgba(0, 0, 0, 0.616);
+    top: 15%;
+    left: 45%;
+  }
+  select, label, input, .demoButton, .cancelButton {
+    margin-top: 0.5em;
+    font-size: 0.7em;
+    padding: 0.2em;
+  }
+  #coderImg {
+    width: 30%;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 900px) {
+  .sectorImg {
+    height: 7em;
+  }
+  h1 {
+    font-size: 1em;
+  }
+  h2 {
+    font-size: 0.75em;
+  }
+  p {
+    font-size: 0.7em;
+  }
+  a{
+    font-size: 0.7em;
+  }
+  
+  table{
+    padding: 0 0.2em 0.2em 0.2em;
+    margin-left: 0;
+  }
+  td, th {
+    text-align: left;
+    padding: 0.1em 0.2em;
+    font-size: 0.7em;
+  }
+  form {
+    margin: 1em;
+    width: 60%;
+    padding: 0.5em 1em;
+    border-radius: 0.2em;
+    border: 1px solid rgb(117, 149, 134);
+    box-shadow: 0em 1em 1em 0em rgba(0, 0, 0, 0.616);
+    top: 15%;
+    left: 45%;
+  }
+  select, label, input, .demoButton, .cancelButton {
+    margin-top: 0.5em;
+    font-size: 0.7em;
+    padding: 0.2em;
+  }
+  #coderImg {
+    width: 60%;
+  }
+}
+

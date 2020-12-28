@@ -22,14 +22,17 @@ const Logo = styled.div`
     width: 12em;
     display: flex;
     align-self: flex-end;
+    margin-bottom: 0.2em;
     @media only screen and (max-width: 768px) {
         margin-top: 0.2em;
+        margin-bottom: 0.1em;
         width: 5em;
         align-self: center;
 
     }
     @media only screen and (min-width: 769px) and (max-width: 900px) {
         margin-top: 0.5em;
+        margin-bottom: 0.1em;
         width: 8em;
 
     }
@@ -76,8 +79,8 @@ const TabLabel = styled.div`
     }
 `;
 const DropDownContent = styled.div`
-    width: 39em;
-    margin-left: 25%;
+    width: 40em;
+    margin-left: 24%;
     position: absolute;
     font-size: 1em;
     border-top: 1px solid grey;
@@ -211,30 +214,30 @@ const NavBar = ({ displayContactForm }) => {
                 <table>
                     <thead>
                         <tr>
-                            <th><a href="/">Private Companies</a></th>
-                            <th><a href="/">Investors</a></th>
-                            <th><a href="/">Public Companies</a></th>
+                            <th><a href="/sample">Private Companies</a></th>
+                            <th><a href="/sample">Investors</a></th>
+                            <th><a href="/sample">Public Companies</a></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><a href="/">Overview</a></td>
-                            <td><a href="/">Overview</a></td>
-                            <td><a href="/">Overview</a></td>
+                            <td><a href="/sample">Overview</a></td>
+                            <td><a href="/sample">Overview</a></td>
+                            <td><a href="/sample">Overview</a></td>
                         </tr>
                         <tr>
-                            <td><a href="/">Cap Table Management</a></td>
-                            <td><a href="/">Fund Administration</a></td>
-                            <td><a href="/">ESPP</a></td>
+                            <td><a href="/sample">Cap Table Management</a></td>
+                            <td><a href="/sample">Fund Administration</a></td>
+                            <td><a href="/sample">ESPP</a></td>
                         </tr>
                         <tr>
-                            <td><a href="/">Scenario Modeling</a></td>
-                            <td><a href="/">Capital Call Line of Credit</a></td>
-                            <td><a href="/">Transfer Agent</a></td>
+                            <td><a href="/sample">Scenario Modeling</a></td>
+                            <td><a href="/sample">Capital Call Line of Credit</a></td>
+                            <td><a href="/sample">Transfer Agent</a></td>
                         </tr>
                         <tr>
-                            <td><a href="/">Private Company Liquidity</a></td>
-                            <td><a href="/">Portfolio Insights</a></td>
+                            <td><a href="/sample">Private Company Liquidity</a></td>
+                            <td><a href="/sample">Portfolio Insights</a></td>
                             <td></td>
                         </tr>
                     </tbody>
@@ -250,26 +253,26 @@ const NavBar = ({ displayContactForm }) => {
                 <table>
                     <thead>
                         <tr>
-                            <th><a href="/">EquityX Resources</a></th>
+                            <th><a href="/sample">EquityX Resources</a></th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><a href="/">&#128172; Customer Testimonials</a></td>
-                            <td><a href="/">&#9997; Blog</a></td>
+                            <td><a href="/sample">&#128172; Customer Testimonials</a></td>
+                            <td><a href="/sample">&#9997; Blog</a></td>
                         </tr>
                         <tr>
-                            <td><a href="/">&#128197; Events & Webinars</a></td>
-                            <td><a href="/">&#x2B50; Partner Stories</a></td>
+                            <td><a href="/sample">&#128197; Events & Webinars</a></td>
+                            <td><a href="/sample">&#x2B50; Partner Stories</a></td>
                         </tr>
                         <tr>
-                            <td><a href="/">&#128718;&#65039; Supports</a></td>
-                            <td><a href="/">&#128214; Product Education</a></td>
+                            <td><a href="/sample">&#128718;&#65039; Supports</a></td>
+                            <td><a href="/sample">&#128214; Product Education</a></td>
                         </tr>
                         <tr>
-                            <td><a href="/">&#128177; Product Release Notes</a></td>
-                            <td><a href="/">&#128269; How We Work</a></td>
+                            <td><a href="/sample">&#128177; Product Release Notes</a></td>
+                            <td><a href="/sample">&#128269; How We Work</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -284,22 +287,22 @@ const NavBar = ({ displayContactForm }) => {
                 <table>
                     <thead>
                         <tr>
-                            <th><a href="/">Partner Resources</a></th>
+                            <th><a href="/sample">Partner Resources</a></th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><a href="/">&#9878; Law Partners</a></td>
-                            <td><a href="/">&#9072; Why partner with EquityX</a></td>
+                            <td><a href="/sample">&#9878; Law Partners</a></td>
+                            <td><a href="/sample">&#9072; Why partner with EquityX</a></td>
                         </tr>
                         <tr>
-                            <td><a href="/">&#65130; VC Partners</a></td>
-                            <td><a href="/">&#129309; Become a partner</a></td>
+                            <td><a href="/sample">&#65130; VC Partners</a></td>
+                            <td><a href="/sample">&#129309; Become a partner</a></td>
                         </tr>
                         <tr>
-                            <td><a href="/">&#128195; Private Equity Partners</a></td>
-                            <td><a href="/">&#128273; Partner Resource Center</a></td>
+                            <td><a href="/sample">&#128195; Private Equity Partners</a></td>
+                            <td><a href="/sample">&#128273; Partner Resource Center</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -314,18 +317,18 @@ const NavBar = ({ displayContactForm }) => {
                 <table>
                     <thead>
                         <tr>
-                            <th><a href="/">About EquityX</a></th>
+                            <th><a href="/sample">About EquityX</a></th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><a href="/">&#128104;&#127997;&#8205;&#128188; Company Info</a></td>
-                            <td><a href="/">&#128240; Press</a></td>
+                            <td><a href="/sample">&#128104;&#127997;&#8205;&#128188; Company Info</a></td>
+                            <td><a href="/sample">&#128240; Press</a></td>
                         </tr>
                         <tr>
-                            <td><a href="/">&#128236; Contact EquityX</a></td>
-                            <td><a href="/">&#128526; Careers</a></td>
+                            <td><a href="/sample">&#128236; Contact EquityX</a></td>
+                            <td><a href="/sample">&#128526; Careers</a></td>
                         </tr>
                     </tbody>
                 </table>

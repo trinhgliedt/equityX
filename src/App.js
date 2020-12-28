@@ -1,11 +1,13 @@
 // import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import { Router } from "@reach/router";
 import styled from 'styled-components';
 import colors from '../src/config/colorConfig';
 import NavBar from './components/NavBar.jsx'
 import HomePage from './views/_01_home.jsx';
 import ContactForm from "./components/ContactForm";
+import SamplePage from "./views/_02_sample.jsx";
 
 const Container = styled.div`
     margin: 0 auto;
@@ -39,13 +41,18 @@ function App() {
 
 
   return (
+    <div className="externalBg pb10">
       <Container className="App">
         <NavBar {...navBarPropsfromApp} />
-        <HomePage {...homePagePropsfromApp} />
+        <Router>
+          <HomePage {...homePagePropsfromApp} path = "/" />
+          <SamplePage path ="/sample" />
+        </Router>
         {isShown_ContactForm && (
-            <ContactForm {...contactFormPropsfromApp}/>
-        )}
+          <ContactForm {...contactFormPropsfromApp}/>
+          )}
       </Container>
+    </div>
   );
 }
 

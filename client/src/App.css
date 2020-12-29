@@ -369,7 +369,7 @@ h2 {
     top: 15%;
     left: 45%;
   }
-  select, label, input, .demoButton, .cancelButton {
+  select, label, input, .demoButton, .cancelButton, .errorMsg {
     margin-top: 0.5em;
     font-size: 0.7em;
     padding: 0.2em;
@@ -383,7 +383,9 @@ h2 {
     height: 1.7em;
     align-self: center;
   }
-
+  .successMsg {
+    font-size: 0.8em;
+  }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 900px) {
@@ -422,7 +424,7 @@ h2 {
     top: 15%;
     left: 45%;
   }
-  select, label, input, .demoButton, .cancelButton {
+  select, label, input, .demoButton, .cancelButton, .errorMsg {
     margin-top: 0.5em;
     font-size: 0.7em;
     padding: 0.2em;
@@ -434,6 +436,9 @@ h2 {
     margin-top: 0.5em;
     margin-bottom: 0.1em;
     height: 1.5em;
+  }
+  .successMsg {
+    font-size: 0.8em;
   }
 }
 

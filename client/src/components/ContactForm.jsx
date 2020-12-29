@@ -48,7 +48,7 @@ const ContactForm = ({ displayContactForm }) => {
                     />
                 </div>
                 {error.companyEmail &&
-                    <div className="redFont">{error.companyEmail}
+                    <div className="errorMsg redFont">{error.companyEmail}
                     </div> }
                 <div className="rowFlex">
                     <input placeholder="Type of organization"  type="text" name="organizationType" 
@@ -59,7 +59,7 @@ const ContactForm = ({ displayContactForm }) => {
                     />
                 </div>
                 {error.typeOfOrg &&
-                    <div className="redFont">{error.typeOfOrg}
+                    <div className="errorMsg redFont">{error.typeOfOrg}
                     </div> }
                 <div className="rowFlex rowSpaceBetweenContent">
                     <label >Organization location: </label>
@@ -125,7 +125,7 @@ const ContactForm = ({ displayContactForm }) => {
                     </select>
                 </div>
                 {error.orgLocation &&
-                    <div className="redFont">{error.orgLocation}
+                    <div className="errorMsg redFont">{error.orgLocation}
                     </div> }
                 <div className="rowFlex rowCenterContent">
                     <button className="demoButton"

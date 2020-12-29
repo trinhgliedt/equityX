@@ -10,10 +10,10 @@ const SamplePage = () => {
                 <img id="coderImg" src={CoderImg}   height="100%" alt="Coder" />
             </div>
             <div className="rowFlex rowCenterContent">
-                <p className="centerText">All the links in the home page are for demonstration purpose only and detail pages are not yet built. It can be done per your request.</p>
+                <p className="centerText smallFont">All the links in the home page are for demonstration purpose only and detail pages are not yet built. It can be done per your request.</p>
             </div>
             <div className="rowFlex rowCenterContent">
-                <Link to="/" className="blueFont bold">Back to home page</Link>
+                <Link to="/" className="smallFont blueFont bold">Back to home page</Link>
             </div>
         </div>
     );

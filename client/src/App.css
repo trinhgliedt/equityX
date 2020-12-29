@@ -64,6 +64,10 @@ a {
   color: black;
   cursor: pointer;
 }
+.smallFont {
+  font-size: 1em;
+  margin-bottom: 1em;
+}
 
 .bold {
   font-weight: bold;
@@ -235,7 +239,6 @@ select, label, input, .demoButton, .cancelButton {
 
 .rowFlex {
   display: flex;
-  /* justify-content: space-between; */
 }
 
 .rowSpaceBetweenContent {
@@ -317,7 +320,9 @@ h2 {
   height: 13em;
   
 }
-
+.col20 {
+  width: 18%;
+}
 
 @media only screen and (max-width: 768px) {
   .sectorImg {
@@ -335,10 +340,10 @@ h2 {
   p {
     font-size: 0.5em;
   }
-  a{
-    font-size: 0.7em;
+  .smallFont {
+    font-size: 0.5em;
+    margin-bottom: 1em;
   }
-  
   table{
     padding: 0 0.2em 0.2em 0.2em;
     margin-left: 0;
@@ -388,7 +393,7 @@ h2 {
 }
 
 #coderImg {
-  height: 15em;
+  height: 9em;
 }
 
 @media only screen and (min-width: 769px) and (max-width: 900px) {
@@ -404,8 +409,10 @@ h2 {
   p {
     font-size: 0.7em;
   }
-  a{
-    font-size: 0.7em;
+
+  .smallFont {
+    font-size: 0.75em;
+    margin-bottom: 0.5em;
   }
   
   table{
@@ -433,7 +440,7 @@ h2 {
     padding: 0.2em;
   }
   #coderImg {
-    height: 15em;
+    height: 11em;
   }
   #logoContainer {
     margin-top: 0.5em;

@@ -110,7 +110,7 @@ const HomePage = ({ displayContactForm }) => {
             </Column33Div>
 
         </div>
-        <div className="p1 greenBg">
+        <div className="p1 greenBg rowFlex rowSpaceBetweenContent">
             <h3 className="lightBlueFont centerText m0">Join EquityX</h3>
             <h2 className="centerText">Get in touch to discuss plans and pricing</h2>
             <div className="rowFlex rowSpaceBetweenContent rowCenterContent greenBg">
@@ -118,39 +118,39 @@ const HomePage = ({ displayContactForm }) => {
             </div>
         </div >
         <div className="rowFlex rowSpaceBetweenContent p2 darkBg">
-            <div>
+            <div className="col20">
                 <h3 className="lightBlueFont">COMPANIES</h3>
-                <p><Link className="whiteFont lightBlueHover" to="/sample">Plans & pricing</Link></p>
-                <p><Link className="whiteFont lightBlueHover" to="/sample">Board consents</Link></p>
-                <p><Link className="whiteFont lightBlueHover" to="/sample">Liquidity</Link></p>
-                <p><Link className="whiteFont lightBlueHover" to="/sample">Products for public companies</Link></p>
+                <Link className="smallFont row whiteFont lightBlueHover" to="/sample">Plans & pricing</Link>
+                <Link className="smallFont row whiteFont lightBlueHover" to="/sample">Board consents</Link>
+                <Link className="smallFont row whiteFont lightBlueHover" to="/sample">Liquidity</Link>
+                <Link className="smallFont row whiteFont lightBlueHover" to="/sample">Products for public companies</Link>
             </div>
-            <div>
+            <div className="col20">
                 <h3 className="purpleFont">INVESTORS</h3>
-                <p><Link className="whiteFont purpleHover" to="/sample">Plans for investors</Link></p>
-                <p><Link className="whiteFont purpleHover" to="/sample">Fund administration</Link></p>
-                <p><Link className="whiteFont purpleHover" to="/sample">ASC 820</Link></p>
-                <p><Link className="whiteFont purpleHover" to="/sample">Capital call line of credit</Link></p>
+                <Link className="smallFont row whiteFont purpleHover" to="/sample">Plans for investors</Link>
+                <Link className="smallFont row whiteFont purpleHover" to="/sample">Fund administration</Link>
+                <Link className="smallFont row whiteFont purpleHover" to="/sample">ASC 820</Link>
+                <Link className="smallFont row whiteFont purpleHover" to="/sample">Capital call line of credit</Link>
             </div>
-            <div>
+            <div className="col20">
                 <h3 className="lightGreenFont">RESOURCES</h3>
-                <p><Link className="whiteFont lightGreenHover" to="/sample">Video tour</Link></p>
-                <p><Link className="whiteFont lightGreenHover" to="/sample">Support</Link></p>
-                <p><Link className="whiteFont lightGreenHover" to="/sample">Employee resources</Link></p>
-                <p><Link className="whiteFont lightGreenHover" to="/sample">Product release notes</Link></p>
+                <Link className="smallFont row whiteFont lightGreenHover" to="/sample">Video tour</Link>
+                <Link className="smallFont row whiteFont lightGreenHover" to="/sample">Support</Link>
+                <Link className="smallFont row whiteFont lightGreenHover" to="/sample">Employee resources</Link>
+                <Link className="smallFont row whiteFont lightGreenHover" to="/sample">Product release notes</Link>
             </div>
-            <div>
+            <div className="col20">
                 <h3 className="lightRedFont">PARTNERS</h3>
-                <p><Link className="whiteFont lightRedHover" to="/sample">Law firm partners</Link></p>
-                <p><Link className="whiteFont lightRedHover" to="/sample">VC partners</Link></p>
-                <p><Link className="whiteFont lightRedHover" to="/sample">Private Equity partners</Link></p>
+                <Link className="smallFont row whiteFont lightRedHover" to="/sample">Law firm partners</Link>
+                <Link className="smallFont row whiteFont lightRedHover" to="/sample">VC partners</Link>
+                <Link className="smallFont row whiteFont lightRedHover" to="/sample">Private Equity partners</Link>
             </div>
-            <div>
+            <div className="col20">
                 <h3 className="orangeFont">ABOUT US</h3>
-                <p><Link className="whiteFont orangeHover" to="/sample">Company</Link></p>
-                <p><Link className="whiteFont orangeHover" to="/sample">Careers</Link></p>
-                <p><Link className="whiteFont orangeHover" to="/sample">Press</Link></p>
-                <p><Link className="whiteFont orangeHover" to="/sample">Contact us</Link></p>
+                <Link className="smallFont row whiteFont orangeHover" to="/sample">Company</Link>
+                <Link className="smallFont row whiteFont orangeHover" to="/sample">Careers</Link>
+                <Link className="smallFont row whiteFont orangeHover" to="/sample">Press</Link>
+                <Link className="smallFont row whiteFont orangeHover" to="/sample">Contact us</Link>
             </div>
         </div>
         </>

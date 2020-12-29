@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useEffect} from 'react';
 import CoderImg from "../images/coderImg.png"
 import { Link } from "@reach/router";
 
 const SamplePage = () => {
-    
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, []);
     return (
-        <div className="sampleContainer p2 pb30">
+        <div className="sampleContainer p2 pb10">
             <div className="rowFlex rowCenterContent">
                 <img id="coderImg" src={CoderImg}   height="100%" alt="Coder" />
             </div>

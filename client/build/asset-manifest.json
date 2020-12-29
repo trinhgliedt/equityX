@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.772a94c6.chunk.css",
-    "main.js": "/static/js/main.26035b3e.chunk.js",
-    "main.js.map": "/static/js/main.26035b3e.chunk.js.map",
+    "main.js": "/static/js/main.5ae73229.chunk.js",
+    "main.js.map": "/static/js/main.5ae73229.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.a6b88753.js",
     "runtime-main.js.map": "/static/js/runtime-main.a6b88753.js.map",
     "static/js/2.31c96eb1.chunk.js": "/static/js/2.31c96eb1.chunk.js",
@@ -13,6 +13,7 @@
     "static/css/main.772a94c6.chunk.css.map": "/static/css/main.772a94c6.chunk.css.map",
     "static/js/2.31c96eb1.chunk.js.LICENSE.txt": "/static/js/2.31c96eb1.chunk.js.LICENSE.txt",
     "static/media/EquityX_Logo.d5ac25ea.png": "/static/media/EquityX_Logo.d5ac25ea.png",
+    "static/media/coderImg.0b268af8.png": "/static/media/coderImg.0b268af8.png",
     "static/media/investors.cb39ff53.png": "/static/media/investors.cb39ff53.png",
     "static/media/pi_chart.451ef5aa.png": "/static/media/pi_chart.451ef5aa.png",
     "static/media/privateCo.a3c44729.png": "/static/media/privateCo.a3c44729.png",
@@ -22,6 +23,6 @@
     "static/js/runtime-main.a6b88753.js",
     "static/js/2.31c96eb1.chunk.js",
     "static/css/main.772a94c6.chunk.css",
-    "static/js/main.26035b3e.chunk.js"
+    "static/js/main.5ae73229.chunk.js"
   ]
 }

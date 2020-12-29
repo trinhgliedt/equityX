@@ -45,7 +45,7 @@ function App() {
       <Container className="App">
         <NavBar {...navBarPropsfromApp} />
         <Router>
-          <HomePage {...homePagePropsfromApp} path = "/" />
+          <HomePage {...homePagePropsfromApp} path = "/home" />
           <SamplePage path ="/sample" />
         </Router>
         {isShown_ContactForm && (

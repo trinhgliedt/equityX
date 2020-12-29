@@ -25,11 +25,6 @@
   --blueBg: linear-gradient(rgba(133, 145, 175, 0.637), rgba(159, 179, 235, 0.644), rgba(133, 145, 175, 0.637));
   --containerBg: radial-gradient(rgb(133, 145, 175), rgba(131, 146, 187, 0.781), rgb(133, 145, 175));
 }
-#logo {
-  width:100%; 
-  height: auto !important; 
-  background-size:cover;
-}
 
 .sampleContainer {
   margin: 0 auto;

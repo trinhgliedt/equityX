@@ -102,7 +102,7 @@ a {
   color: var(--lightGreenFont);
 }
 .successMsg {
-  color: green;
+  /* color: green; */
   font-size: x-large;
   text-align: center;
 }
@@ -366,7 +366,7 @@ h2 {
     border-radius: 0.2em;
     border: 1px solid rgb(117, 149, 134);
     box-shadow: 0em 1em 1em 0em rgba(0, 0, 0, 0.616);
-    top: 15%;
+    top: 30%;
     left: 45%;
   }
   select, label, input, .demoButton, .cancelButton, .errorMsg {
@@ -421,7 +421,7 @@ h2 {
     border-radius: 0.2em;
     border: 1px solid rgb(117, 149, 134);
     box-shadow: 0em 1em 1em 0em rgba(0, 0, 0, 0.616);
-    top: 15%;
+    top: 30%;
     left: 45%;
   }
   select, label, input, .demoButton, .cancelButton, .errorMsg {

@@ -110,7 +110,7 @@ const HomePage = ({ displayContactForm }) => {
             </Column33Div>
 
         </div>
-        <div className="p1 greenBg rowFlex rowSpaceBetweenContent">
+        <div className="p1 greenBg">
             <h3 className="lightBlueFont centerText m0">Join EquityX</h3>
             <h2 className="centerText">Get in touch to discuss plans and pricing</h2>
             <div className="rowFlex rowSpaceBetweenContent rowCenterContent greenBg">

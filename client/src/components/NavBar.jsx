@@ -162,7 +162,7 @@ const NavBar = ({ displayContactForm }) => {
         <NavBarContainer>
             {/* <Logo><img src={logo} alt="logo" width="100%" height="auto"/></Logo> */}
             <div id="logoContainer">
-            <img src={logo} alt="logo" width="100%" height="auto"/>
+            <img src={logo} alt="logo" height="100%"/>
             </div>
             <TabContainer>
                 <NavBarTab 

@@ -102,7 +102,6 @@ a {
   color: var(--lightGreenFont);
 }
 .successMsg {
-  /* color: green; */
   font-size: x-large;
   text-align: center;
 }
@@ -375,7 +374,7 @@ h2 {
     padding: 0.2em;
   }
   #coderImg {
-    width: 30%;
+    height: 10em;
   }
   #logoContainer {
     margin-top: 0.2em;
@@ -386,6 +385,10 @@ h2 {
   .successMsg {
     font-size: 0.8em;
   }
+}
+
+#coderImg {
+  height: 15em;
 }
 
 @media only screen and (min-width: 769px) and (max-width: 900px) {
@@ -430,7 +433,7 @@ h2 {
     padding: 0.2em;
   }
   #coderImg {
-    width: 60%;
+    height: 15em;
   }
   #logoContainer {
     margin-top: 0.5em;

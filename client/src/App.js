@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
-import { Router } from "@reach/router";
+import { Link, Router } from "@reach/router";
 import styled from 'styled-components';
 import colors from '../src/config/colorConfig';
 import NavBar from './components/NavBar.jsx'
@@ -44,9 +44,11 @@ function App() {
     <div className="externalBg pb10">
       <Container className="App">
         <NavBar {...navBarPropsfromApp} />
+        <Link to="/sample">Sample Link</Link>
+        <Link to="/home">Home</Link>
         <Router>
-          <HomePage {...homePagePropsfromApp} path = "/home" />
-          <SamplePage path ="/sample" />
+          <HomePage {...homePagePropsfromApp} path="/home" />
+          <SamplePage path="/sample" />
         </Router>
         {isShown_ContactForm && (
           <ContactForm {...contactFormPropsfromApp}/>

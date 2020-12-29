@@ -18,27 +18,6 @@ const NavBarContainer = styled.div`
     }
 `;
 
-const Logo = styled.div`
-    width: 12em;
-    display: flex;
-    align-self: flex-end;
-    margin-bottom: 0.2em;
-    @media only screen and (max-width: 768px) {
-        margin-top: 0.2em;
-        margin-bottom: 0.1em;
-        width: 5em;
-        height: auto;
-        align-self: center;
-
-    }
-    @media only screen and (min-width: 769px) and (max-width: 900px) {
-        margin-top: 0.5em;
-        margin-bottom: 0.1em;
-        width: 8em;
-
-    }
-`;
-
 const TabContainer = styled.div`
     height: 100%;
     width: 68%;

@@ -20,6 +20,7 @@ const NavBarContainer = styled.div`
 
 const Logo = styled.div`
     width: 12em;
+    height: auto;
     display: flex;
     align-self: flex-end;
     margin-bottom: 0.2em;
@@ -27,6 +28,7 @@ const Logo = styled.div`
         margin-top: 0.2em;
         margin-bottom: 0.1em;
         width: 5em;
+        height: auto;
         align-self: center;
 
     }
@@ -34,6 +36,7 @@ const Logo = styled.div`
         margin-top: 0.5em;
         margin-bottom: 0.1em;
         width: 8em;
+        height: auto;
 
     }
 `;

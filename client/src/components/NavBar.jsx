@@ -6,6 +6,7 @@ import DemoButton from "./DemoButton";
 
 const NavBarContainer = styled.div`
     width: 97.36%;
+    max-height: 10em;
     display: flex;
     justify-content: space-between;
     background-image: ${colors.navbarBg};
@@ -20,7 +21,6 @@ const NavBarContainer = styled.div`
 
 const Logo = styled.div`
     width: 12em;
-    height: auto;
     display: flex;
     align-self: flex-end;
     margin-bottom: 0.2em;
@@ -36,7 +36,6 @@ const Logo = styled.div`
         margin-top: 0.5em;
         margin-bottom: 0.1em;
         width: 8em;
-        height: auto;
 
     }
 `;
@@ -162,7 +161,7 @@ const NavBar = ({ displayContactForm }) => {
     return (
         <div className="sticky">
         <NavBarContainer>
-            <Logo><img src={logo} alt="logo" width="100%"/></Logo>
+            <Logo><img src={logo} alt="logo" width="100%" height="auto" id="logo"/></Logo>
             <TabContainer>
                 <NavBarTab 
                     id = "products"

@@ -32,7 +32,13 @@
   padding: 10em;
   background-image: var(--containerBg);
 }
+#logoContainer {
+  width: 12em;
+  display: flex;
+  align-self: flex-end;
+  margin-bottom: 0.2em;
 
+}
 .externalBg {
  background-image: var(--containerBg);
 }
@@ -371,6 +377,14 @@ h2 {
   #coderImg {
     width: 30%;
   }
+  #logoContainer {
+    margin-top: 0.2em;
+      margin-bottom: 0.1em;
+      width: 5em;
+      height: auto;
+      align-self: center;
+  }
+
 }
 
 @media only screen and (min-width: 769px) and (max-width: 900px) {
@@ -416,6 +430,11 @@ h2 {
   }
   #coderImg {
     width: 60%;
+  }
+  #logoContainer {
+    margin-top: 0.5em;
+    margin-bottom: 0.1em;
+    width: 8em;
   }
 }
 

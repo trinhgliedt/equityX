@@ -44,10 +44,8 @@ function App() {
     <div className="externalBg pb10">
       <Container className="App">
         <NavBar {...navBarPropsfromApp} />
-        <Link to="/sample">Sample Link</Link>
-        <Link to="/home">Home</Link>
         <Router>
-          <HomePage {...homePagePropsfromApp} path="/home" />
+          <HomePage {...homePagePropsfromApp} path="/" />
           <SamplePage path="/sample" />
         </Router>
         {isShown_ContactForm && (
